@@ -1,0 +1,145 @@
+/* General styles */
+.appFeatures {
+  background-color: #f7fafc; /* Light gray background */
+  padding: 60px 20px; /* Adequate padding for spacing */
+  text-align: center;
+}
+
+.appFeatures h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748; /* Dark gray color */
+  margin-bottom: 20px;
+}
+
+.appFeatures p {
+  font-size: 1.125rem;
+  color: #4a5568; /* Slightly lighter gray */
+  margin-bottom: 40px;
+}
+
+.Feature-Box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-Item {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-Item img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.feature-Item h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748; /* Dark gray for the name */
+  margin-bottom: 10px;
+}
+
+.feature-Item h3 {
+  font-size: 1.125rem;
+  color: #4a5568; /* Light gray color for the description */
+}
+
+.feature-Item:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .appFeatures h1 {
+    font-size: 2.5rem;
+  }
+
+  .appFeatures p {
+    font-size: 1rem;
+  }
+
+  .Feature-Box {
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .feature-Item {
+    width: 250px; /* Slightly smaller width on tablet screens */
+  }
+
+  .feature-Item h2 {
+    font-size: 1.25rem;
+  }
+
+  .feature-Item h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .appFeatures h1 {
+    font-size: 2rem; /* Smaller text size on mobile */
+  }
+
+  .appFeatures p {
+    font-size: 0.9rem;
+  }
+
+  .Feature-Box {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .feature-Item {
+    width: 100%; /* Full width on small devices */
+    padding: 20px;
+  }
+
+  .feature-Item h2 {
+    font-size: 1.125rem;
+  }
+
+  .feature-Item h3 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appFeatures h1 {
+    font-size: 1.75rem;
+  }
+
+  .appFeatures p {
+    font-size: 0.85rem;
+  }
+
+  .Feature-Box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .feature-Item {
+    width: 90%;
+    padding: 18px;
+  }
+
+  .feature-Item h2 {
+    font-size: 1.125rem;
+  }
+
+  .feature-Item h3 {
+    font-size: 0.875rem;
+  }
+}

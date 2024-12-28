@@ -1,0 +1,104 @@
+.whywe {
+  padding: 50px 0 20px 0;
+  background-color: #f4f4f4; /* Light grey background for a subtle effect */
+  color: #2c3e50; /* Dark text color for better readability */
+  text-align: center;
+  width: 100%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.whywe h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.whywe h2 {
+  font-size: 1.2em;
+  color: #000000; /* Softer text for less emphasis */
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+.Speciality, .ambulanceTypes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Even spacing */
+  gap: 20px;
+}
+
+.specialityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* White background for a card effect */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  flex: 1 1 calc(33.333% - 40px); /* Flexible layout for 3 items per row */
+  max-width: calc(33.333% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ambulanceType{
+    background: fixed;   
+}
+
+.specialityItem:hover, .ambulanceType:hover {
+  transform: translateY(-5px); /* Hover effect for interactivity */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+}
+
+.specialityItem img, .ambulanceType img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.specialityItem h1, .ambulanceType h3 {
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.specialityItem h3, .ambulanceType h3 {
+  font-size: 1em;
+  color: #0d0d0d;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .specialityItem, .ambulanceType {
+    flex: 1 1 calc(50% - 20px); /* Two items per row on tablets */
+    max-width: calc(50% - 20px);
+  }
+
+  .whywe h1 {
+    font-size: 2em; /* Adjusted heading size */
+  }
+
+  .whywe h2 {
+    font-size: 1em; /* Smaller text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .specialityItem, .ambulanceType {
+    flex: 1 1 100%; /* One item per row on small screens */
+    max-width: 100%;
+  }
+
+  .whywe h1 {
+    font-size: 1.8em; /* Reduced heading size */
+  }
+
+  .whywe h2 {
+    font-size: 0.9em; /* Adjusted description size */
+  }
+
+  .specialityItem img, .ambulanceType img {
+    width: 60px; /* Adjusted icon size for smaller screens */
+  }
+}
