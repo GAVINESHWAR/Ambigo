@@ -7,8 +7,7 @@ const partners = [
   { name: "Ambulance Drivers", icon: "🚑" },
   { name: "Doctors", icon: "👨‍⚕️" },
   { name: "Hospitals", icon: "🏥" },
-  { name: "Medical Persons", icon: "🩺" },
-  { name: "Pharmacists", icon: "💊" },
+  { name: "Medical Persons", icon: "🩺" }
 ];
 
 const PartnersSection = () => {
@@ -97,7 +96,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-section">
-      <h2 className="contact-form-heading">Collaborate With Us</h2>
+      <h2 className="contact-form-heading">Collaborate With Ambigo</h2>
       <p className="contact-form-subheading">
         Reach out to us to discuss collaboration opportunities.
       </p>

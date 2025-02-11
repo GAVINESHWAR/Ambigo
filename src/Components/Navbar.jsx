@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-
+import Logo from '../assets/LogoIcon.png';
+import { NavLink } from "react-router-dom";
+ 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -13,32 +15,66 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo/Image */}
         <div className="navbar-logo">
-          <img
-            src="https://gavineshwar.github.io/Medica/assests/IMG_4989.PNG"
-            alt="Logo"
-          />
+          <img src={Logo} alt="Logo" />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              color: "orangered",
+            }}
+          >
+            <h1 style={{ fontFamily: "serif" }}>Ambigo</h1>
+            <h4>ECNALUBMA Services</h4>
+          </div>
         </div>
 
         {/* Desktop Navigation Links */}
         <ul className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about-us">About Us</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#trainings">Trainings</a>
-          </li>
-          <li>
-            <a href="#blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="#contact-us">Contact Us</a>
-          </li>
+          <NavLink
+            to="/"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/")}
+          >
+            <li>
+              <a href="/#Home"> Home</a>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/enterprise"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/enterprise")}
+          >
+            <li>
+              <a href="/#services">Services</a>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/training"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/training")}
+          >
+            <li>
+              <a href="/">Training</a>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/training"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/training")}
+          >
+            <li>
+              <a href="/">Blogs</a>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/contactus"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/contactus")}
+          >
+            <li>
+              <a href="/">Contact Us</a>
+            </li>
+          </NavLink>
         </ul>
 
         {/* Hamburger Menu Icon */}

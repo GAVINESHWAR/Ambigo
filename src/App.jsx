@@ -12,14 +12,16 @@ import AppDownload from './Components/AppDownload';
 import Footer from './Components/Footer';
 import CustomerReview from './Components/CustomerReview';
 import Achievements from './Components/Achievements';
-import Test from './Components/test';
+import Test from './Components/Test';
 import PartnersSection from './Components/PartnersSection';
+import AmbulanceBooking from './Components/AmbulanceBooking';
+
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <StartPage />
       <Insights />
       {/* <Begining/> */}
@@ -31,7 +33,7 @@ function App() {
       <CustomerReview />
       <PartnersSection/>
       <Achievements />
-      <Footer />
+      {/* <AmbulanceBooking/> */}
       {/* <Test/> */}
     </>
   );

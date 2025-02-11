@@ -1,21 +1,39 @@
 import React from "react";
 import "./Footer.css";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-section">
-          <h3>About</h3>
           <ul>
+            <h3>About</h3>
             <li>
-              <a href="#">What we do</a>
+              <Link
+                to="/AboutUs"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="#">Team</a>
+              <NavLink
+                to="/ourteam"
+                onClick={() => (window.location.href = "/ourteam")}
+                activeClassName="active"
+              >
+                Team
+              </NavLink>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <NavLink
+                to="/Careers"
+                onClick={() => (window.location.href = "/Careers")}
+                activeClassName="active"
+              >
+                Careers
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -24,13 +42,31 @@ const Footer = () => {
           <h3>Services</h3>
           <ul>
             <li>
-              <a href="#">Enterprise</a>
+              <NavLink
+                to="/enterprise"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/enterprise")}
+              >
+                Enterprise
+              </NavLink>
             </li>
             <li>
-              <a href="#">Individual</a>
+              <NavLink
+                to="/individual"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/individual")}
+              >
+                Individual
+              </NavLink>
             </li>
             <li>
-              <a href="#">Hospital</a>
+              <NavLink
+                to="/hospital"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/hospital")}
+              >
+                Hospital
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -39,13 +75,31 @@ const Footer = () => {
           <h3>Training</h3>
           <ul>
             <li>
-              <a href="#">Driving Training</a>
+              <NavLink
+                to="/training"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/training")}
+              >
+                Driving Training
+              </NavLink>
             </li>
             <li>
-              <a href="#">Paramedical Training Institute</a>
+              <NavLink
+                to="/training"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/training")}
+              >
+                Paramedical Training Institute
+              </NavLink>
             </li>
             <li>
-              <a href="#">First Aid</a>
+              <NavLink
+                to="/training/first-aid"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                First Aid
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -54,13 +108,31 @@ const Footer = () => {
           <h3>Reach Us</h3>
           <ul>
             <li>
-              <a href="#">Contact</a>
+              <NavLink
+                to="/contactus"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/contactus")}
+              >
+                Contact
+              </NavLink>
             </li>
             <li>
-              <a href="#">Support</a>
+              <NavLink
+                to="/support"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                Support
+              </NavLink>
             </li>
             <li>
-              <a href="#">Location</a>
+              <NavLink
+                to="/location"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                Location
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -69,13 +141,31 @@ const Footer = () => {
           <h3>Blogs</h3>
           <ul>
             <li>
-              <a href="#">Blogs</a>
+              <NavLink
+                to="/AboutUs"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                Blogs
+              </NavLink>
             </li>
             <li>
-              <a href="#">reviews</a>
+              <NavLink
+                to="/AboutUs"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                Reviews
+              </NavLink>
             </li>
             <li>
-              <a href="#">Founders Desk</a>
+              <NavLink
+                to="/AboutUs"
+                activeClassName="active"
+                onClick={() => (window.location.href = "/AboutUs")}
+              >
+                Founders Desk
+              </NavLink>
             </li>
           </ul>
         </div>

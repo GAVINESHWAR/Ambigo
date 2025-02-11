@@ -1,0 +1,333 @@
+/* ContactPage.css */
+.concontact-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.conbreadcrumb {
+  margin: 20px 0;
+  color: #666;
+}
+
+.conhome-link {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.conseparator {
+  margin: 0 10px;
+}
+
+.concurrent-page {
+  color: #666;
+}
+
+.conmain-heading {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.conmain-heading h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.conhighlight {
+  color: orange;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.consubtitle {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.concontent-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.concontact-info-card {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.conhelp-section {
+  flex: 1;
+}
+
+.concontact-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.concontact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.concontact-list li {
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.conemail, .conwebsite {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.conlocation-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.conlocation-btn:hover {
+  background-color: #f50057;
+}
+
+.conhelp-text {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.conhelp-options p {
+  color: #666;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.conhelp-options p:hover {
+  background: #eeeeee;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .conmain-heading h1 {
+    font-size: 2rem;
+  }
+  
+  .concontent-container {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .concontent-container {
+    flex-direction: column;
+  }
+
+  .conmain-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .consubtitle {
+    font-size: 1.1rem;
+  }
+
+  .concontact-page h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .concontact-page {
+    padding: 15px;
+  }
+
+  .conmain-heading {
+    margin: 30px 0;
+  }
+
+  .conmain-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .concontact-info-card,
+  .conhelp-section {
+    padding: 20px;
+  }
+
+  .concontact-page h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* This is button codes */
+/* PartnerSection.css */
+.conpartner-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.conpartner-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.consubtitle {
+  color: #00b0ff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.contitle {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.conpartnership-options {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.conpartner-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.conpartner-card:hover {
+  transform: translateY(-5px);
+}
+
+.concard-header {
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.concard-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.concard-content p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.conpartner-button {
+  background: transparent;
+  border: 2px solid #ff3366;
+  color: #ff3366;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.conpartner-button:hover {
+  background:#ff3366;
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .conpartner-container {
+    margin: 40px auto;
+  }
+
+  .contitle {
+    font-size: 2.2rem;
+  }
+
+  .consubtitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .conpartnership-options {
+    gap: 20px;
+  }
+
+  .conpartner-card {
+    min-width: 280px;
+  }
+
+  .contitle {
+    font-size: 2rem;
+  }
+
+  .concard-header {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .concard-content p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .conpartner-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .conpartner-header {
+    margin-bottom: 30px;
+  }
+
+  .contitle {
+    font-size: 1.8rem;
+  }
+
+  .consubtitle {
+    font-size: 1.2rem;
+  }
+
+  .conpartner-card {
+    min-width: 100%;
+  }
+
+  .concard-content {
+    padding: 20px;
+  }
+
+  .conpartner-button {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

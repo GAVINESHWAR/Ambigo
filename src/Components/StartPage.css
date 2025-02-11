@@ -32,6 +32,9 @@
   padding: 40px 0 40px 0;
   text-align: center;
 }
+.main-heading span{
+  color: orange;
+}
 
 .sub-heading {
   font-size: 36px;
@@ -41,11 +44,17 @@
   padding: 30px 0 30px 0;
   text-align: center;
 }
+.sub-heading span{
+  color: red;
+}
 
 .description {
   font-size: 1.125rem;
   color: #4a5568;
   margin-top: 16px;
+}
+.left-section h3{
+  text-align: left;
 }
 
 .button-group {
@@ -97,11 +106,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 24px;
-  height: fit-content;
+  height: 60%;
 }
 .right-section img{
-    width: 535px;
-    height: 200px;
+    width:100%;
+    height: 50%;
 }
 .callback-heading {
   font-size: 1.125rem;
@@ -164,6 +173,63 @@
 .submit-btn:hover {
   background-color: #dd6b20;
 }
+
+
+
+/* Login SingUp */
+/* Styling for BookingsAmbu Container */
+.BookingsAmbu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Common Button Styling */
+.BookingsAmbu button {
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+/* Sign Up Button */
+.SignUp {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 117, 140, 0.5);
+}
+
+.SignUp:hover {
+  background: linear-gradient(135deg, #ff758c, #ff3c7d);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 60, 125, 0.6);
+}
+
+/* Login Button */
+.Login {
+  background: linear-gradient(135deg, #7ed6df, #22a6b3);
+  color: white;
+  box-shadow: 0 4px 10px rgba(34, 166, 179, 0.5);
+}
+
+.Login:hover {
+  background: linear-gradient(135deg, #22a6b3, #0b6975);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(11, 105, 117, 0.6);
+}
+
+/* Removing default link styles */
+.BookingsAmbu button a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {

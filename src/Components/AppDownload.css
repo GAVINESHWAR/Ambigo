@@ -28,9 +28,7 @@
 }
 
 .app-qr img {
-  /* max-width: 200px; Maximum width for the QR Code */
-  height: auto;
-  margin-bottom: 10px;
+   width: 130px;
 }
 
 .app-qr p {

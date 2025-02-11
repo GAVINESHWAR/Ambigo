@@ -1,16 +1,19 @@
 import React from "react"
 import './Whywe.css';
+import { Link } from "react-router-dom";
 
 const WhyWe = () => {
 
     const speciality = [
       {
-        image: "https://gavineshwar.github.io/Medica/assests//service.avif",
+        image:
+          "https://x5siwvse0svtj0yw5pfe.ultatel.com/wp-content/uploads/2022/05/illustration-of-247-customer-service-support-1-scaled.jpg",
         Name: "24/7 Support",
         info: "Always available to help you whenever you need us.",
       },
       {
-        image: "https://gavineshwar.github.io/Medica/assests/emergency2.png",
+        image:
+          "https://okcredit-blog-images-prod.storage.googleapis.com/2021/03/Customer-Care-Company3--1--1.jpg",
         Name: "Emergency Support",
         info: "Rapid emergency response to ensure your safety.",
       },
@@ -24,36 +27,41 @@ const WhyWe = () => {
     const ambulances = [
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/normal-ambulance.webp",
+          "https://media.istockphoto.com/id/1314209951/photo/ambulance-car-isolated-on-white.jpg?s=612x612&w=0&k=20&c=eALi7d7APrY-14qJ6iNbgI5VMuImHObOxRFHfNe_M84=",
         Name: "Ambulance Services",
+        link: "/basicsupport",
       },
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/oxygen-ambulance-1.webp",
+          "https://media.istockphoto.com/id/1135669700/vector/ambulance-vehicle-flat-emergency-auto.jpg?s=612x612&w=0&k=20&c=VfenuIQ3smc-0Pp49UKtzmxRvHAZhAtenA-m2RlZ0Uc=",
         Name: "Oxygen Ambulance",
+        link: "/oxyzenambulanceservice",
       },
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/icu-ambulance-1.webp",
+          "https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         Name: "ICU Ventilator Ambulance",
+        link: "/ventilatorambulanceservice",
       },
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/deadbody-moutuary-ambulance.webp",
-        Name: "Mortuary Van Ambulance",
+          "https://media.istockphoto.com/id/1213265415/vector/vector-isometric-hospitalization-with-coronavirus.jpg?s=612x612&w=0&k=20&c=pNbBsN1Z19RZXZtpDcbM1W5S3OOGdNARTQEIvB3aP0M=",
+        Name: "Mortuary Van",
+        link: "/mortuaryambulanceservice",
       },
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/deadbody-freezer-ambulance.webp",
+          "https://5.imimg.com/data5/ND/EZ/RK/SELLER-82940438/dead-body-freezer-box-500x500.jpg",
         Name: "Dead Body Freezer Box On Rent",
+        link: "/deadboxservice",
       },
       {
         image:
-          "https://www.goaid.in/wp-content/uploads/2023/12/air-ambulance-1.webp",
-          Name:"Air Ambulance Services"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZl43Q2w8fj9CmUumG42iDN2qCWrTpdbbPWg&s",
+        Name: "Bike Ambulance Services",
+        link: "/bikeambulanceservice",
       },
     ];
-
   return (
     <div className="whywe">
       <h1>Why only We</h1>
@@ -68,28 +76,34 @@ const WhyWe = () => {
           );
         })}
       </div>
+
       <h1>Type of Ambulance</h1>
       <h2>
-        Ambigo ambulance provide almost all kinds of ambulance services that
-        caters with the all possible need of our customers. These types of
-        ambulances covers wide range of types including Normal Ambulance Service
-        to Air Ambulance Service, ICU Ventilator Ambulance to Dead body freezer
-        box. However, we have listed all the major ambulance service with all
-        their related features of each ambulances associated with GoAid
-        Ambulance Services below.
+        Ambigo provides a comprehensive range of ambulance services designed to
+        meet the diverse needs of our customers. From standard ambulance
+        services to advanced options like air ambulances, ICU ventilator
+        ambulances, and dead body freezer boxes, we cater to every possible
+        requirement with utmost care and professionalism. Below, we have
+        detailed the major ambulance services offered by Ambigo, along with
+        their key features and benefits
       </h2>
-
       <div className="ambulanceTypes">
-            {ambulances.map((item)=>{
-                return(
-                    <div className="ambulanceType">
-                            <img src = {item.image}/>
-                            <h3>{item.Name}</h3>
-                    </div>
-                )
-            })}
+        {ambulances.map((item) => {
+          return (
+            <Link
+              to={item.link}
+              activeClassName="active"
+              onClick={() => (window.location.href = item.link)}
+              style={{ listStyle: "none", textDecoration: "none" }}
+            >
+              <div className="ambulanceType">
+                <img src={item.image} />
+                <h3>{item.Name}</h3>
+              </div>
+            </Link>
+          );
+        })}
       </div>
-        
     </div>
   );
 }

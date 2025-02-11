@@ -1,0 +1,219 @@
+.hospitalintro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f0f0f0;
+}
+
+.hospitalintroleft {
+    max-width: 35%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hspitalintroright {
+    max-width: 50%;
+}
+
+.hspitalintroright h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hspitalintroright p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hospitalintro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hospitalintroleft {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hspitalintroright {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hospitalintro {
+        padding: 15px;
+    }
+
+    .hspitalintroright h1 {
+        font-size: 1.5rem;
+    }
+
+    .hspitalintroright p {
+        font-size: 0.9rem;
+    }
+}
+
+/* EmergencyContact.css */
+.hosemergency-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.hoscontent-wrapper {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hosimage-section {
+  flex: 1;
+  position: relative;
+}
+
+.hosambulance-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.hosform-section {
+  flex: 1;
+  padding: 40px;
+  background: white;
+}
+
+.hosform-header {
+  margin-bottom: 30px;
+}
+
+.hosform-header h2 {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.hosform-header h1 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hoscontact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hosform-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.hosform-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.hosmessage-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hossubmit-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hossubmit-button:hover {
+  background-color: #357abd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .hoscontent-wrapper {
+    margin: 20px;
+  }
+  
+  .hosform-section {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hoscontent-wrapper {
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .hosimage-section {
+    height: 300px;
+  }
+
+  .hosform-section {
+    padding: 25px;
+  }
+
+  .hosform-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hosemergency-container {
+    padding: 10px;
+  }
+
+  .hoscontent-wrapper {
+    margin: 10px;
+  }
+
+  .hosform-section {
+    padding: 20px;
+  }
+
+  .hosform-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hosform-input {
+    padding: 10px 14px;
+  }
+
+  .hossubmit-button {
+    padding: 12px 16px;
+  }
+}

@@ -1,15 +1,16 @@
 import React from "react";
 import "./AppDownload.css";
+import { NavLink } from "react-router-dom";
 
 const AppDownload = () => {
   return (
     <div className="app-media-section">
-      <h2 className="section-title">App Media</h2>
+      <h2 className="section-title">App Ambigo</h2>
       <div className="app-media-container">
         {/* Left Side: QR Code */}
         <div className="app-qr">
           <img
-            src="https://gavineshwar.github.io/Medica/assests/scanner.jpeg"
+            src="https://medulance.com/assets/images/qr-code.svg"
             alt="QR Code for App Download"
           />
           <p>Scan to download the app</p>
@@ -37,9 +38,7 @@ const AppDownload = () => {
           </div>
         </div>
       </div>
-
-<BookNow/>
-
+      <BookNow />
     </div>
   );
 };
@@ -55,9 +54,15 @@ const BookNow = ()=>{
         </div>
         <div className="BookUs">
           <h2>Book Ambulance</h2>
-          <button>
-            <a href="#">Book Now</a>
-          </button>
+          <NavLink
+            to="/login"
+            activeClassName="active"
+            onClick={() => (window.location.href = "/login")}
+          >
+            <button>
+              <a href="#">Book Now</a>
+            </button>
+          </NavLink>
         </div>
       </div>
     );

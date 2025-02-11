@@ -1,0 +1,101 @@
+.team-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .team-title {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .team-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: normal;
+        }
+
+        @media (max-width: 600px) {
+            .team-title {
+                font-size: 2rem;
+            }
+
+            .team-description {
+                font-size: 0.9rem;
+            }
+        }
+
+.ourcontainer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .ourprofile-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ourprofile-image {
+            width: 50%;
+            max-width:30%;
+            height: auto;
+            max-height: 200px;
+        }
+        .ourprofile-details {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .ourheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .ourname {
+            font-size: 24px;
+            color: #333;
+        }
+        .ourposition {
+            color: #666;
+            margin-top: 5px;
+        }
+        .oursection-title {
+            font-size: 20px;
+            color: #444;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .ourabout, .ourexperience, .ourachievements {
+            margin-bottom: 20px;
+        }
+        .ourlinkedin-icon {
+            width: 30px;
+            height: 30px;
+            fill: #0077B5;
+        }
+        .ourachievements ul, .ourexperience ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .ourprofile-wrapper {
+                flex-direction: column;
+            }
+            .ourprofile-image {
+                width: 100%;
+                max-width: 100%;
+            }
+            .ourprofile-details {
+                width: 100%;
+            }
+        }

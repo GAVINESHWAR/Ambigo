@@ -1,0 +1,126 @@
+
+.app-container {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Status bar */
+.status-bar {
+  background: #222;
+  color: white;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* Map container */
+.map-container {
+  height: 300px;
+  width: 100%;
+  background: #ddd;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Location Panel */
+.location-panel {
+  padding: 15px;
+}
+
+.location-alert {
+  background: #ffcc00;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Input fields */
+.location-input-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.location-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.location-input:focus {
+  border-color: #007bff;
+}
+
+/* Suggestions */
+.location-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+/* Confirm Button */
+.confirm-button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-button:hover {
+  background: #0056b3;
+}
+
+/* Price Details */
+.price-details {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.price-total {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}

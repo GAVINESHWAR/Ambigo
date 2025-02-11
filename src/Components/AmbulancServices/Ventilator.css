@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.ventiSTart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-image: url("https://img.freepik.com/free-psd/abstract-blur-luxury-hospital-corridor-generative-ai_587448-1984.jpg");
+}
+
+.ICUstleft {
+  text-align: center;
+}
+
+.ICUstleft h1 {
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.ICUstleft h4 {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.ICUstleft button {
+  padding: 12px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ICUstleft button:hover {
+  background-color: #e64a19;
+}
+
+.ICUstright {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .ventiSTart {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ICUstleft {
+    flex: 1;
+    text-align: left;
+  }
+
+  .ICUstleft h1 {
+    font-size: 2.5rem;
+  }
+
+  .ICUstleft h4 {
+    font-size: 1.5rem;
+  }
+
+  .ICUstright {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 20px;
+  }
+}
+
+/* Second section */
+.ventibegin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.venti_left {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.venticuright {
+  flex: 2;
+  max-width: 600px;
+  margin: 10px;
+}
+
+.venticuright h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.venticuright h4 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.venticuright p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .venti_left {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .venticuright {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .venticuright h2 {
+    font-size: 1.5rem;
+  }
+
+  .venticuright h4 {
+    font-size: 1rem;
+  }
+
+  .venticuright p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .venticuright h2 {
+    font-size: 1.3rem;
+  }
+
+  .venticuright h4 {
+    font-size: 0.9rem;
+  }
+
+  .venticuright p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}
+
+/*Third Section Why*/
+.whyventiambigo {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.whyventiambigo h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.whyventiambigo p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ventifea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.featureItems {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(33.333% - 1rem);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItems:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featureItems h6 {
+  font-size: 1.2rem;
+  color: #0073e6;
+  margin-bottom: 0.5rem;
+}
+
+.featureItems p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .featureItems {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .featureItems {
+    width: 100%;
+  }
+
+  .whyventiambigo h2 {
+    font-size: 1.5rem;
+  }
+
+  .whyventiambigo p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+}
+
+/*Near me*/
+
+/* Container styles */
+.ventinearme {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Paragraph styles (left side) */
+.ventinearleft {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Dark text */
+  text-align: justify;
+  margin: 20px;
+  flex: 1;
+}
+
+/* Image styles (right side) */
+.ventinearright {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+  flex: 1;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .ventinearme {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ventinearleft {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .ventinearright {
+    width: 45%; /* Adjust image size */
+  }
+}
+
+/* Adjustments for small screens */
+@media (max-width: 480px) {
+  .ventinearme {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ventinearleft {
+    font-size: 14px;
+    margin: 10px;
+    text-align: justify;
+  }
+
+  .ventinearright {
+    width: 90%; /* Ensure the image fits smaller screens */
+    margin: 10px 0;
+  }
+}
+
+/*What is venti ICU*/
+/* Container styles */
+.whatVentiIcu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: rgb(255, 123, 0); /* Light background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  gap: 20px; /* Space between elements */
+  margin-bottom: 30px;
+}
+
+/* Image styles (left side) */
+.whatventileft {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Content styles (right side) */
+.whatventiright {
+  text-align: left;
+  flex: 1;
+  color: white;
+}
+
+.whatventiright h2 {
+  font-size: 24px;
+  color: #333; /* Darker heading color */
+  margin-bottom: 10px;
+}
+
+.whatventiright p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white; /* Softer text color */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .whatVentiIcu {
+    flex-direction: row; /* Side-by-side layout */
+    align-items: center;
+  }
+
+  .whatventileft {
+    flex: 1;
+    max-width: 45%; /* Adjust image size */
+  }
+
+  .whatventiright {
+    flex: 1;
+    padding: 0 20px; /* Add spacing around text */
+  }
+
+  .whatventiright h2 {
+    font-size: 28px;
+  }
+
+  .whatventiright p {
+    font-size: 18px;
+  }
+}
+
+/* Adjustments for small screens */
+@media (max-width: 480px) {
+  .whatVentiIcu {
+    flex-direction: column; /* Stack elements */
+    gap: 10px;
+  }
+
+  .whatventileft {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .whatventiright h2 {
+    font-size: 20px;
+  }
+
+  .whatventiright p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+
+/*24 by 7*/
+
+/* Container styles */
+.by7venti24 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Text (left side) */
+.leftvent24 {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555; /* Soft text color */
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Image (right side) */
+.rightventi24 {
+  width: 100%; 
+  height: 250px;
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .by7venti24 {
+    flex-direction: row; /* Side-by-side layout */
+    align-items: center;
+  }
+
+  .leftvent24 {
+    text-align: justify;
+    padding-right: 20px; /* Add spacing between text and image */
+  }
+
+  .rightventi24 {
+    flex: 1;
+    max-width: 45%; /* Adjust image size */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 480px) {
+  .by7venti24 {
+    flex-direction: column; /* Stack text and image */
+    gap: 10px; /* Reduce spacing for smaller screens */
+  }
+
+  .leftvent24 {
+    font-size: 14px; /* Smaller text for readability */
+    text-align: justify;
+  }
+
+  .rightventi24 {
+    width: 100%; /* Full width image */
+  }
+}
+
+/*This is Services */
+/* General styling */
+.ventiservice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Individual service item styling */
+.VentServeItem {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.51);
+  transition: transform 0.3s ease;
+}
+
+/* Service item hover effect */
+.VentServeItem:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading styling */
+.VentServeItem h3 {
+  font-size: 1.5rem;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.VentServeItem p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ventiservice {
+    grid-template-columns: repeat(2, 1fr); /* 2 items in a row for tablets */
+    padding: 10px;
+  }
+
+  .VentServeItem {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .VentServeItem h3 {
+    font-size: 1.2rem;
+    color: blue;
+  }
+
+  .VentServeItem p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ventiservice {
+    grid-template-columns: 1fr; /* 1 item per row for mobile */
+    gap: 10px;
+  }
+
+  .VentServeItem {
+    max-width: 100%;
+    padding: 30px;
+    height: 28vh;
+  }
+
+  .VentServeItem h3 {
+    font-size: 1.4rem;
+  }
+
+  .VentServeItem p {
+    font-size: 1.1rem;
+  }
+}

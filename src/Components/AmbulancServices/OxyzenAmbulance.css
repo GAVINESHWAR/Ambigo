@@ -1,0 +1,528 @@
+/* General Layout */
+.oxystartpage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-image: url("https://t3.ftcdn.net/jpg/06/31/48/64/360_F_631486438_ulkY2lKYk9ByyX64KJ6OrJZZqKz7Ef9C.jpg");
+  flex-wrap: wrap; /* Ensures the content wraps on small screens */
+}
+
+.startleft {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.startleft h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6600; /* Orange theme */
+  margin-bottom: 10px;
+}
+
+.startleft p {
+  font-size: 1.2rem;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.startleft button {
+  padding: 12px 30px;
+  background-color: #ff6600; /* Button orange color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startleft button:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+}
+
+.startRight {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.startRight img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow for depth */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .oxystartpage {
+    flex-direction: column; /* Stacks the content vertically */
+    text-align: center;
+  }
+
+  .startleft,
+  .startRight {
+    max-width: 100%;
+  }
+
+  .startleft h1 {
+    font-size: 2rem;
+  }
+
+  .startleft p {
+    font-size: 1rem;
+  }
+
+  .startleft button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .startRight img {
+    width: 100%; /* Makes image fully responsive */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .startleft h1 {
+    font-size: 1.8rem;
+  }
+
+  .startleft p {
+    font-size: 0.9rem;
+  }
+
+  .startleft button {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+}
+/*Oxyzen Experince*/
+
+/* General Layout */
+.Oxyexperience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures the content wraps on smaller screens */
+}
+
+.oxyright {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.oxyright img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for image depth */
+}
+
+.oxyleft {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.oxyleft h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6600; /* Orange theme */
+  margin-bottom: 15px;
+}
+
+.oxyleft p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .Oxyexperience {
+    flex-direction: column; /* Stacks the sections vertically on smaller screens */
+    text-align: center;
+  }
+
+  .oxyright,
+  .oxyleft {
+    max-width: 100%;
+  }
+
+  .oxyleft h1 {
+    font-size: 2rem;
+  }
+
+  .oxyleft p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .oxyleft h1 {
+    font-size: 1.8rem;
+  }
+
+  .oxyleft p {
+    font-size: 0.9rem;
+  }
+
+  .oxyleft {
+    padding: 15px;
+  }
+}
+
+/* why oxyzen ambulaance*/
+/* General styles */
+.whyoxy {
+  padding: 20px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.whyoxy h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.whyoxy p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Why This Oxygen section */
+.whythisoxy {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.oxyitem {
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oxyitem img {
+  width: 80%;
+  height: 30vh;
+  border-radius: 8px;
+}
+
+.oxyitem h6 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.oxyitem p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Hover effect */
+.oxyitem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .whyoxy {
+    padding: 20px;
+  }
+
+  .whyoxy h1 {
+    font-size: 2rem;
+  }
+
+  .whyoxy p {
+    font-size: 1rem;
+  }
+
+  .whythisoxy {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oxyitem {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyoxy {
+    padding: 15px;
+  }
+
+  .whyoxy h1 {
+    font-size: 1.8rem;
+  }
+
+  .whyoxy p {
+    font-size: 0.9rem;
+  }
+
+  .oxyitem {
+    width: 100%;
+  }
+}
+
+/* Near me code   */
+.oxynearme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.oxynearme p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.oxynearme img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .oxynearme p {
+    font-size: 0.9rem;
+  }
+
+  .oxynearme img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .oxynearme p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .oxynearme img {
+    max-width: 90%;
+  }
+}
+
+/*What is oxyzen*/
+/* Base Styles for Whatisoxy Component */
+.Whatisoxy {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 10px 80px 10px ;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: orange;
+}
+
+.Whatisoxy img {
+  width: 100%;
+  /* max-width: 300px; */
+  height: 40vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.oxycontent {
+  max-width: 600px;
+}
+
+.oxycontent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.oxycontent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Whatisoxy {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Whatisoxy img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .oxycontent h2 {
+    font-size: 1.3rem;
+  }
+
+  .oxycontent p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .oxycontent h2 {
+    font-size: 1.1rem;
+  }
+
+  .oxycontent p {
+    font-size: 0.8rem;
+  }
+}
+
+/*24/7 service provder*/
+
+/* Base Styles for oxy247Amb Component */
+.oxy247Amb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.oxy247Amb p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+.oxy247Amb img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .oxy247Amb {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .oxy247Amb img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .oxy247Amb p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .oxy247Amb p {
+    font-size: 0.8rem;
+  }
+
+  .oxy247Amb img {
+    max-width: 100%;
+  }
+}
+
+/*oxyzen features*/
+
+.oxyfeatures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.oxyfeatureitem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.407);
+  padding: 15px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid orange;
+}
+
+.oxyfeatureitem h5 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.oxyfeatureitem p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.oxyfeatureitem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .oxyfeatures {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oxyfeatureitem {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .oxyfeatureitem h5 {
+    font-size: 16px;
+  }
+
+  .oxyfeatureitem p {
+    font-size: 13px;
+  }
+}

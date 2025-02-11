@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import "./StartPage.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { NavLink } from "react-router-dom";
+import logo from '../assets/logo.jpg';
 
 const AmbulanceService = () => {
 
@@ -92,15 +94,15 @@ const AmbulanceService = () => {
         {/* Left Section */}
         <div className="left-section">
           <h2 className="main-heading">
-            Welcome to Ambigo,
+            Welcome to <span>Ambigo</span>
             <br />
             Your Health, Our Priority
           </h2>
           <h1 className="sub-heading">
-            24/7 Ambulance Services, Anytime, Anywhere
+            <span>24/7</span> Ambulance Services, Anytime, Anywhere
           </h1>
           <p className="description">
-            In emergency situations, help or rescue is just a click away.
+            In emergency situations, help or rescue just a click away.
           </p>
           <h3>We will be at your door!</h3>
           <div className="button-group">
@@ -115,7 +117,27 @@ const AmbulanceService = () => {
 
         {/* Right Section */}
         <div className="right-section">
-          <img src="https://i.pinimg.com/originals/51/10/12/511012fa1cfe9efa408b0c26bf30795d.gif" />
+          <img src={logo} />
+          <div className="BookingsAmbu">
+            <NavLink
+              to="/login"
+              activeClassName="active"
+              onClick={() => (window.location.href = "/login")}
+            >
+              <button className="SignUp">
+                <a href="">Sign Up</a>
+              </button>
+            </NavLink>
+            <NavLink
+              to="/login"
+              activeClassName="active"
+              onClick={() => (window.location.href = "/login")}
+            >
+              <button className="Login">
+                <a href="">Log In</a>
+              </button>
+            </NavLink>
+          </div>
           {/* <div className="right-section">
             <h3 className="callback-heading">
               GET A CALL BACK IN JUST 5 SECONDS
@@ -168,7 +190,7 @@ const AmbulanceService = () => {
               </button>
             </form>
           </div> */}
-          <div className="right-section">
+          {/* <div className="right-section">
             <h3 className="callback-heading">
               GET A CALL BACK IN JUST 5 SECONDS
             </h3>
@@ -223,12 +245,12 @@ const AmbulanceService = () => {
                   <span className="terms-link">Privacy Policies</span>
                 </label>
               </div>
-              <button type="submit" className="submit-btn" disabled = {isLoading}>
-                Submit
+              <button type="submit" className="submit-btn" disabled={isLoading}>
+                Book Now
               </button>
             </form>
-            <ToastContainer/>
-          </div>
+            <ToastContainer />
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,0 +1,396 @@
+.deadstart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc.jpg");
+  padding: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness by wrapping on smaller screens */
+}
+.deadstartleft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.deadstartleft h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.deadstartleft h2 {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.deadbuttons {
+  display: flex;
+  gap: 15px;
+}
+
+.deadbuttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deadbuttons button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.deadbuttons button:hover {
+  background-color: rgb(255, 140, 0);
+}
+
+.deadstartright {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deadstartright img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .deadstart {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .deadbuttons {
+    justify-content: center;
+  }
+
+  .deadstartright img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadstartleft h1 {
+    font-size: 1.8rem;
+  }
+
+  .deadstartleft h2 {
+    font-size: 1rem;
+  }
+
+  .deadbuttons button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .deadstartright img {
+    max-width: 250px;
+  }
+}
+
+/*Intro of That*/
+
+.deadintro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.deadintroleft img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deadintroright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.deadintroright h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.deadintroright p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .deadintro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .deadintroright h2 {
+    font-size: 1.8rem;
+  }
+
+  .deadintroright p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadintroright h2 {
+    font-size: 1.6rem;
+  }
+
+  .deadintroright p {
+    font-size: 0.8rem;
+  }
+}
+
+/*This is 24 by 7 services*/
+
+.dead24by7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left24by7 {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.right24by7 {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .dead24by7 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right24by7 {
+    max-width: 100%;
+  }
+
+  .left24by7 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left24by7 {
+    font-size: 0.9rem;
+  }
+}
+
+/*Affordable Pass*/
+
+.deadafford {
+  padding: 20px;
+  background-color: orange;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.deadafford h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.deadafford p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .deadafford {
+    padding: 15px;
+  }
+
+  .deadafford h1 {
+    font-size: 1.8rem;
+  }
+
+  .deadafford p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadafford {
+    padding: 10px;
+  }
+
+  .deadafford h1 {
+    font-size: 1.5rem;
+  }
+
+  .deadafford p {
+    font-size: 0.8rem;
+  }
+}
+/*Hire the Box*/
+
+/* Container for the section */
+.deadhirebox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Styling for the image */
+.deadhireright {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.deadhireright img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Content section styling */
+.deadhireright {
+  flex: 1;
+  padding: 20px;
+  /* background-color: white; */
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Title styling */
+.deadhireright h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.deadhireright p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .deadhirebox {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .deadhireright {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .deadhireright h1 {
+    font-size: 1.8rem;
+  }
+
+  .deadhireright p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadhireright h1 {
+    font-size: 1.5rem;
+  }
+
+  .deadhireright p {
+    font-size: 0.8rem;
+  }
+}
+/*Rent the box*/
+
+.deadboxrent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.boxrentleft {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.boxrentleft h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.boxrentleft p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.boxrentright {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.boxrentright img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .deadboxrent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxrentleft,
+  .boxrentright {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,200 @@
+/* Responsive CSS for AmbigoERS section */
+.enterERS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* max-width: 800px; */
+  width: 100%;
+}
+
+.ERSleft {
+  max-width: 50%;
+  height: 250px;
+  margin-bottom: 15px;
+}
+.ERSleft {
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.ERSright {
+  width: 100%;
+}
+
+.ERSright h1 {
+  font-size: 24px;
+  color: orange;
+  margin-bottom: 10px;
+  font-weight: bold ;
+}
+
+.ERSright p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .enterERS {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+  .ERSleft {
+    flex: 1;
+    margin-right: 20px;
+    width: 100%;
+  }
+  .ERSright {
+    flex: 2;
+  }
+}
+
+/* EmergencyContact.css */
+.entercontainer {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entercontact-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+}
+
+.enterimage-section {
+  flex: 1;
+  height: 600px;
+}
+
+.enterimage-section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.enterform-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.enterform-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.entercontainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.entercontainer h1 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #111;
+}
+
+.enterform-group {
+  margin-bottom: 20px;
+}
+
+.entercontainer input,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.entercontainer input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.entercontainer textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.entercontainer button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.entercontainer button:hover {
+  background-color: #357abd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .entercontact-wrapper {
+    flex-direction: column;
+  }
+
+  .enterimage-section {
+    height: 300px;
+  }
+
+  .enterform-section {
+    padding: 20px;
+  }
+
+  .enterform-content {
+    max-width: 100%;
+  }
+
+  .entercontainer h1 {
+    font-size: 1.75rem;
+  }
+
+  .entercontainer h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .entercontainer {
+    padding: 10px;
+  }
+
+  .enterform-section {
+    padding: 15px;
+  }
+
+  .entercontainer input,
+  textarea {
+    padding: 10px 14px;
+  }
+
+  .entercontainer button {
+    padding: 12px;
+  }
+}

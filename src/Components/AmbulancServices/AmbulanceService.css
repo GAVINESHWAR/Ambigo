@@ -1,0 +1,731 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+/* Main Section */
+.MStartPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: url("https://png.pngtree.com/background/20230525/original/pngtree-image-of-futuristic-medical-hospital-room-picture-image_2736851.jpg");
+  color: #333;
+}
+
+/* Left Section */
+.Sleftsection {
+  flex: 1;
+  padding: 20px;
+}
+
+.Sleftsection h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff7f32; /* Orange color */
+  margin-bottom: 10px;
+}
+
+.Sleftsection h3 {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.ASbtns {
+  display: flex;
+  gap: 10px;
+}
+
+.ASbtns button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff7f32; /* Orange button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ASbtns button:hover {
+  background-color: #e76f26; /* Darker orange on hover */
+}
+
+.ASbtns button:first-child {
+  background-color: #4CAF50; /* Green for 'Download' button */
+}
+
+.ASbtns button:first-child:hover {
+  background-color: #45a049;
+}
+
+/* Right Section */
+.Srightsection {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.Srightsection img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .MStartPage {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Sleftsection {
+    margin-bottom: 20px;
+  }
+
+  .Srightsection {
+    margin-top: 20px;
+  }
+
+  .Sleftsection h1 {
+    font-size: 2rem;
+  }
+
+  .Sleftsection h3 {
+    font-size: 1rem;
+  }
+
+  .ASbtns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ASbtns button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .MStartPage {
+    padding: 10px;
+  }
+
+  .Sleftsection h1 {
+    font-size: 1.5rem;
+  }
+
+  .Sleftsection h3 {
+    font-size: 0.9rem;
+  }
+
+  .ASbtns button {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Affordable */
+
+.offordable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+}
+
+.OffLeft {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.OffLeft h4 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+}
+
+.OffRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.OffRight img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .offordable {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .OffLeft {
+    text-align: left;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .OffLeft h4 {
+    font-size: 1.4rem;
+  }
+
+  .OffRight {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .offordable {
+    padding: 60px;
+  }
+
+  .OffLeft h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Main Section */
+.SSSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  color: #333;
+  gap: 20px;
+}
+
+/* Right Side (Image) */
+.SSRightSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SSRightSide img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Left Side (Text) */
+.SSLeftSide {
+  flex: 1;
+  padding: 20px;
+}
+
+.SSLeftSide h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff7f32; /* Orange color */
+  margin-bottom: 10px;
+}
+
+.SSLeftSide h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.SSLeftSide h5 {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .SSSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .SSLeftSide {
+    margin-bottom: 20px;
+  }
+
+  .SSRightSide {
+    margin-top: 20px;
+  }
+
+  .SSLeftSide h1 {
+    font-size: 2rem;
+  }
+
+  .SSLeftSide h3 {
+    font-size: 1.3rem;
+  }
+
+  .SSLeftSide h5 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SSSection {
+    padding: 20px;
+  }
+
+  .SSLeftSide h1 {
+    font-size: 1.8rem;
+  }
+
+  .SSLeftSide h3 {
+    font-size: 1.2rem;
+  }
+
+  .SSLeftSide h5 {
+    font-size: 0.95rem;
+  }
+
+  .SSRightSide img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .SSSection {
+    padding: 15px;
+  }
+
+  .SSLeftSide h1 {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+
+  .SSLeftSide h3 {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .SSLeftSide h5 {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .SSRightSide img {
+    max-width: 80%;
+  }
+}
+
+/* Near me */
+.offordable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0 20px 0;
+  overflow: hidden;
+}
+
+.OffLeft {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.OffLeft h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  font-weight: 400;
+}
+
+.OffRight {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.OffRight img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .offordable {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .OffLeft {
+    width: 50%;
+    text-align: left;
+  }
+
+  .OffLeft h4 {
+    font-size: 0.9rem;
+  }
+
+  .OffRight {
+    width: 50%;
+  }
+
+  .OffRight img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .offordable {
+    padding: 40px;
+  }
+
+  .OffLeft h4 {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+
+/* What is What */
+
+.Ambulance-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 50vh; 
+  background-color: #c5a92d;
+  background-image: url("https://t4.ftcdn.net/jpg/03/43/37/67/360_F_343376703_QHejNfqdvv12WwHkxS6Ts19nF2aIYuEo.jpg") ;
+  border-image-slice: 1;
+  margin: 10px 0 10px 0;
+}
+
+.AmbLeft {
+  text-align: center;
+  margin: 20px;
+}
+
+.AmbLeft h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.AmbLeft p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #120d0d;
+  max-width: 600px;
+  margin: 20px;
+}
+
+.AmbRight img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .Ambulance-service {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .AmbLeft {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+  }
+
+  .AmbLeft p {
+    margin: 0;
+  }
+
+  .AmbRight {
+    flex: 1;
+    text-align: right;
+  }
+
+  .AmbRight img {
+    max-width: 100%;
+  }
+}
+
+
+/*24/7 service*/
+
+
+/* General Styles */
+.alltimeservice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.timeleft {
+  flex: 1 1 50%; /* Ensures timeleft takes 50% of the space */
+  padding: 20px;
+}
+
+.serviceright {
+  flex: 1 1 50%; /* Ensures serviceright takes the remaining 50% of the space */
+  max-width: 100%;
+}
+
+.serviceright img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Optional, for rounded corners */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .timeleft {
+    flex: 1 1 100%; /* Full width for text on smaller screens */
+  }
+
+  .serviceright {
+    flex: 1 1 100%; /* Full width for image on smaller screens */
+  }
+
+  .serviceright img {
+    width: 100%; /* Ensures the image takes full width */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeleft {
+    padding: 10px; /* Reduces padding on smaller devices */
+  }
+
+  .serviceright img {
+    width: 100%; /* Ensures the image stretches fully */
+    height: auto;
+  }
+}
+
+
+/* Hospitals Section */
+.SHospitals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+  width: 100%;
+}
+
+/* Individual Hospital Item */
+.hospitalItem {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+  height:100%;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hospitalItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.hospitalItem p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hover Effect */
+.hospitalItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .SHospitals {
+    padding: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .hospitalItem {
+    padding: 15px;
+  }
+
+  .hospitalItem p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SHospitals {
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hospitalItem {
+    padding: 10px;
+  }
+
+  .hospitalItem p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .SHospitals {
+    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .hospitalItem {
+    padding: 8px;
+  }
+
+  .hospitalItem p {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Details Section */
+.SSdetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+}
+
+/* Information Block */
+.SSinfo {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.201);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.SSinfo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6f00; /* Custom color for heading */
+  margin-bottom: 10px;
+}
+
+.SSinfo h4 {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover Effect */
+.SSinfo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .SSdetails {
+    padding: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .SSinfo {
+    padding: 15px;
+  }
+
+  .SSinfo h2 {
+    font-size: 1.4rem;
+  }
+
+  .SSinfo h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SSdetails {
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .SSinfo {
+    padding: 12px;
+  }
+
+  .SSinfo h2 {
+    font-size: 1.2rem;
+  }
+
+  .SSinfo h4 {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .SSdetails {
+    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .SSinfo {
+    padding: 10px;
+  }
+
+  .SSinfo h2 {
+    font-size: 1rem;
+  }
+
+  .SSinfo h4 {
+    font-size: 0.8rem;
+  }
+}
