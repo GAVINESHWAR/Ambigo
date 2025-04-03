@@ -1,28 +1,38 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./CareerPage.css";
-import Footer from "../Footer";
+import {Link, useLocation} from 'react-router-dom';
 
 const CareerPage = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const jobListings = [
     {
       title: "Ambulance Driver",
       description: "Responsible for safely transporting patients.",
       location: "Multiple Locations",
+      link:"/ambulanceDriverForm"
     },
     {
       title: "Hospital Coordinator",
       description: "Manage hospital communications and patient records.",
       location: "Main Branch",
+      link:"/hospitalCoordinatorForm"
     },
     {
       title: "Emergency Staff",
       description: "Provide emergency care and support.",
       location: "Citywide",
+      link:"/emergencyStaffForm"
     },
     {
       title: "Paramedical Trainer",
       description: "Train paramedics for emergency response.",
       location: "Training Center",
+      link:"/paramedicalTrainerForm"
     },
   ];
 
@@ -58,7 +68,9 @@ const CareerPage = () => {
                 <h2 className="job-title">{job.title}</h2>
                 <p className="job-description">{job.description}</p>
                 <p className="job-location">Location: {job.location}</p>
-                <button className="apply-button">Apply Now</button>
+                <Link to={job.link} onClick={(e)=> window.location.href = job.link}>
+                  <button className="apply-button">Apply Now</button> 
+                </Link>
               </div>
             ))}
           </div>

@@ -1,70 +1,77 @@
-import React from "react"
+import React, {useEffect} from "react"
 import './Aboutus.css';
 import { FaBed, FaClock, FaHeadset, FaAmbulance } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import AppDownload from "../AppDownload";
+import { useLocation } from "react-router-dom";
 
 const Aboutus = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
     const AmbulanceType = [
       {
         image:
-          "https://cmv360.s3.ap-southeast-1.amazonaws.com/small_Force_Advance_Life_Support_Ambulance_Type_D_c0a95ed2e8.webp",
+          "https://media.istockphoto.com/id/2110772135/vector/medical-vehicle-ambulance-car-or-emergency-service-vector-illustration-for-pick-up-patient.jpg?s=612x612&w=0&k=20&c=ZMNnm8KIQQLpCYLcmZgq_q9IlVYWNIdaZR2scUgyrFY=",
         name: "Basic Life Support",
         answer:
           "Equipped with state-of-the-art medical tools and technology to provide critical care for severely ill patients.",
       },
       {
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkxhnmhUYcDYJ3sKqsvA3KfGhKgGPSGTh-Vw&s",
+          "https://media.istockphoto.com/id/1246153344/vector/ambulance-stretcher-and-oxygen-cylinders-vector-design.jpg?s=612x612&w=0&k=20&c=qq_FQZLj0TxUnWM8NVW2wKHD6IiCaupWrPkPHEYdjh8=",
         name: "Advance Life Support",
         answer:
           "These ambulances include essential medical equipment such as a patient bed, pulse oximeter, and oxygen supply devices.",
       },
       {
         image:
-          "https://www.ambulanceoncall.com/assets/images/blogs/organize-transportation-from-the-hospital.jpg",
+          "https://media.istockphoto.com/id/1225840880/vector/biosafety-workers-with-patient-in-ambulance.jpg?s=612x612&w=0&k=20&c=bkIAGa6IsaCm3OA9Cy0rsIaCE95veJcQJwtXrmqZytE=",
         name: "patient Transport Ambulance",
         answer:
           "A specialized medical vehicle designed for the safe transfer of patients between hospitals and healthcare facilities.",
       },
-      {
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxy-DHvzAid8cmGXNNpDsq-zujAxuv17FxVA&s",
-        name: "Mortuary Van",
-        answer:
-          "Used for the dignified transportation of deceased individuals from one location to another.",
-      },
+      // {
+      //   image:
+      //     "https://media.istockphoto.com/id/1214214876/vector/ambulance-van-with-a-driver-in-a-medical-mask-against-the-background-of-an-abstract.jpg?s=612x612&w=0&k=20&c=gGR7GyN_xulhtk4L_aTTUIsUIT5B4qK17F-T_Wikkto=",
+      //   name: "Mortuary Van",
+      //   answer:
+      //     "Used for the dignified transportation of deceased individuals from one location to another.",
+      // },
     ];
     const ourTeam = [
       {
         name: "Karamthoti Sai Kumar",
         image:
-          "https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118",
+          "/SaiKumar.png",
         designation: "Founder",
       },
       {
         name: "Priyanka",
         image:
-          "https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118",
+          "/SaiKumar.png",
         designation: "Advisor",
       },
       {
         name: "G Avineshwar",
         image:
-          "https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118",
-        designation: "Web Developer",
+          "/avineshwar.jpg",
+        designation: "FullSatck web Developer",
       },
       {
         name: "Vivek",
         image:
-          "https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118",
+          "/Vivek.png",
         designation: "Software Developer",
       },
       {
         name: "Prasad",
         image:
-          "https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118",
+          "/SaiKumar.png",
         designation: "Advisor",
       },
     ];
@@ -73,15 +80,18 @@ const Aboutus = () => {
       <div className="about-container">
         <div className="aboutwhat">
           <h1 className="text-center">
-            What is <span style={{ color: "Orange" , textDecoration:"underline"}}>Ambigo</span>
+            What is{" "}
+            <span style={{ color: "Orange", textDecoration: "underline" }}>
+              Ambigo
+            </span>
           </h1>
-          <p style={
-            {
-              textAlign:"center",
-              fontSize:"15px",
-              fontWeight:"lighter"
-            }
-          }>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "15px",
+              fontWeight: "lighter",
+            }}
+          >
             Introducing Ambigo: India's pioneering GPS-based technology platform
             designed to provide fast and reliable first-point medical attention.
             In today's world, where independent living is increasingly valued,
@@ -116,42 +126,87 @@ const Aboutus = () => {
             </div>
           </div>
         </div>
-    <div className="hiscontainer">
-      <div className="hiscard problem">
-        <h2>Problem</h2>
-        <p>
-          In 2018, 151,000 fatalities were caused due to road accidents. 50% of lives of road accident victims could have been saved if timely assistance was made available to them. Moreover, 40%-60% deaths in India are preventable. The major issues faced are:
-        </p>
-        <ul>
-          <li>Severe lack of awareness and facility of first aid communication</li>
-          <li>Inability of a person to have a top of mind recall of emergency numbers</li>
-          <li>High response time</li>
-          <li>Large number of calls being missed</li>
-          <li>The Emergency & Ambulatory services sector is unorganised</li>
-          <li>Lack of awareness coupled with the lack of technology</li>
-          <li>No standard practice in ERS, affecting serviceability & customer experience</li>
-          <li>No prominent national entity in emergency response</li>
-        </ul>
-        <p>Since the COVID-19 outbreak, panic among people and lack of awareness about emergency services.</p>
-      </div>
-      <div className="hiscard solution">
-        <h2>Solution</h2>
-        <p>
-          Ambigo Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide:
-        </p>
-        <ul>
-          <li><FaCheckCircle /> End to end emergency response service</li>
-          <li><FaCheckCircle /> GPS enabled high quality ambulances</li>
-          <li><FaCheckCircle /> Emergency Management Technology</li>
-          <li><FaCheckCircle /> Trained Drivers and certified Paramedics</li>
-          <li><FaCheckCircle /> Covering 22 cities in India (All metros & Major tier 2 cities)</li>
-          <li><FaCheckCircle /> Dedicated Helpline Number</li>
-        </ul>
-        <div className="hisicon">
-          {/* Add your image or icon here */}
+        <div className="hiscontainer">
+          <div className="hiscard problem">
+            <h2>Problem</h2>
+            <p>
+              In 2018, 151,000 fatalities were caused due to road accidents. 50%
+              of lives of road accident victims could have been saved if timely
+              assistance was made available to them. Moreover, 40%-60% deaths in
+              India are preventable. The major issues faced are:
+            </p>
+            <ul>
+              <li>
+                <FaCheckCircle />
+                Severe lack of awareness and facility of first aid communication
+              </li>
+              <li>
+                <FaCheckCircle />
+                Inability of a person to have a top of mind recall of emergency
+                numbers
+              </li>
+              <li>
+                <FaCheckCircle />
+                High response time
+              </li>
+              <li>
+                <FaCheckCircle />
+                Large number of calls being missed
+              </li>
+              <li>
+                <FaCheckCircle />
+                The Emergency & Ambulatory services sector is unorganised
+              </li>
+              <li>
+                <FaCheckCircle />
+                Lack of awareness coupled with the lack of technology
+              </li>
+              <li>
+                <FaCheckCircle />
+                No standard practice in ERS, affecting serviceability & customer
+                experience
+              </li>
+              <li>
+                <FaCheckCircle />
+                No prominent national entity in emergency response
+              </li>
+            </ul>
+            <p>
+              Since the COVID-19 outbreak, panic among people and lack of
+              awareness about emergency services.
+            </p>
+          </div>
+          <div className="hiscard solution">
+            <h2>Solution</h2>
+            <p>
+              Ambigo Healthcare is India's first & leading comprehensive
+              emergency response service provider, extensively dealing in the
+              Ambulatory Services. We provide:
+            </p>
+            <ul>
+              <li>
+                <FaCheckCircle /> End to end emergency response service
+              </li>
+              <li>
+                <FaCheckCircle /> GPS enabled high quality ambulances
+              </li>
+              <li>
+                <FaCheckCircle /> Emergency Management Technology
+              </li>
+              <li>
+                <FaCheckCircle /> Trained Drivers and certified Paramedics
+              </li>
+              <li>
+                <FaCheckCircle /> Covering 22 cities in India (All metros &
+                Major tier 2 cities)
+              </li>
+              <li>
+                <FaCheckCircle /> Dedicated Helpline Number
+              </li>
+            </ul>
+            <div className="hisicon">{/* Add your image or icon here */}</div>
+          </div>
         </div>
-      </div>
-    </div>
       </div>
       <div className="Whycontainer">
         <h2 className="Whyheading">Why Choose Us?</h2>
@@ -203,33 +258,33 @@ const Aboutus = () => {
         <h1>Type of Ambulance</h1>
         <h2>know about what you need</h2>
         <div className="typeAmbucontainer">
-        {AmbulanceType.map((item)=>{
-            return(
-                <div className="AmbulanceItem">
-                    <img src = {item.image}/>
-                    <h2>{item.name}</h2>
-                    <p>{item.answer}</p>
-                </div>
-            )
-        })}
+          {AmbulanceType.map((item) => {
+            return (
+              <div className="AmbulanceItem">
+                <img src={item.image} />
+                <h2>{item.name}</h2>
+                <p>{item.answer}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div className="OurTeamAMbigo">
-            <h1>Our Team</h1>
-            <p></p>
-            <div className="OurT">
-                {ourTeam.map((item)=>{
-                    return(
-                        <div className="TeamMate">
-                            <img src = {item.image}/>
-                            <h3>{item.name}</h3>
-                            <p>{item.designation}</p>
-                        </div>
-                    )
-                })}
-            </div>
-      </div>    
-      <AppDownload/>
+      {/* <div className="OurTeamAMbigo">
+        <h1>Our Team</h1>
+        <p></p>
+        <div className="OurT">
+          {ourTeam.map((item) => {
+            return (
+              <div className="TeamMate">
+                <img src={item.image} />
+                <h3>{item.name}</h3>
+                <p>{item.designation}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div> */}
+      <AppDownload />
     </>
   );
 }

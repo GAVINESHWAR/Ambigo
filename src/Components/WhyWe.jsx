@@ -18,7 +18,8 @@ const WhyWe = () => {
         info: "Rapid emergency response to ensure your safety.",
       },
       {
-        image: "https://gavineshwar.github.io/Medica/assests/priority.jpeg",
+        image:
+          "https://media.istockphoto.com/id/1299025648/vector/doctor-in-mask-consulting-female-patient-physycian-sitting-at-the-desk-with-monitor-family.jpg?s=612x612&w=0&k=20&c=9ZjUoTOYGNyGRjw9DSLdYiIN4_VnWRw5oiYYJyU5e6s=",
         Name: "Prority for Patients",
         info: "Your health and safety are our first priority.",
       },
@@ -27,40 +28,39 @@ const WhyWe = () => {
     const ambulances = [
       {
         image:
-          "https://media.istockphoto.com/id/1314209951/photo/ambulance-car-isolated-on-white.jpg?s=612x612&w=0&k=20&c=eALi7d7APrY-14qJ6iNbgI5VMuImHObOxRFHfNe_M84=",
-        Name: "Ambulance Services",
+          "https://media.istockphoto.com/id/2110772135/vector/medical-vehicle-ambulance-car-or-emergency-service-vector-illustration-for-pick-up-patient.jpg?s=612x612&w=0&k=20&c=ZMNnm8KIQQLpCYLcmZgq_q9IlVYWNIdaZR2scUgyrFY=",
+        Name: "Patient Transport",
         link: "/basicsupport",
       },
       {
         image:
-          "https://media.istockphoto.com/id/1135669700/vector/ambulance-vehicle-flat-emergency-auto.jpg?s=612x612&w=0&k=20&c=VfenuIQ3smc-0Pp49UKtzmxRvHAZhAtenA-m2RlZ0Uc=",
-        Name: "Oxygen Ambulance",
+          "https://media.istockphoto.com/id/1371069496/vector/ambulance-set.jpg?s=612x612&w=0&k=20&c=Ldxgvxc62n13ED_1cWmi7YrwoSYCx0wwDJJP0HtmCcY=",
+        Name: "Basic life Support",
         link: "/oxyzenambulanceservice",
       },
       {
         image:
-          "https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        Name: "ICU Ventilator Ambulance",
+          "https://media.istockphoto.com/id/1323660896/vector/paramedics-assist-a-patient-in-an-ambulance.jpg?s=612x612&w=0&k=20&c=z4mLxdeIe2oPrxCuLrUTpCt4rDoRnK4jfOZbDamVaNw=",
+        Name: "Advance life support",
         link: "/ventilatorambulanceservice",
       },
+      // {
+      //   image:
+      //     "https://static.vecteezy.com/system/resources/previews/001/818/427/non_2x/ambulance-paramedic-car-side-view-design-free-vector.jpg",
+      //   Name: "Mortuary Van",
+      //   link: "/mortuaryambulanceservice",
+      // },
       {
-        image:
-          "https://media.istockphoto.com/id/1213265415/vector/vector-isometric-hospitalization-with-coronavirus.jpg?s=612x612&w=0&k=20&c=pNbBsN1Z19RZXZtpDcbM1W5S3OOGdNARTQEIvB3aP0M=",
-        Name: "Mortuary Van",
-        link: "/mortuaryambulanceservice",
+        image: "/CarAmbo.png",
+        Name: "Patient Transport Car/Auto",
+        link: "/carpatienttransport",
       },
-      {
-        image:
-          "https://5.imimg.com/data5/ND/EZ/RK/SELLER-82940438/dead-body-freezer-box-500x500.jpg",
-        Name: "Dead Body Freezer Box On Rent",
-        link: "/deadboxservice",
-      },
-      {
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZl43Q2w8fj9CmUumG42iDN2qCWrTpdbbPWg&s",
-        Name: "Bike Ambulance Services",
-        link: "/bikeambulanceservice",
-      },
+      // {
+      //   image:
+      //     "https://mir-s3-cdn-cf.behance.net/projects/404/0d6d6532115661.Y3JvcCwxMzk1LDEwODksMCwxMTU.png",
+      //   Name: "Bike Ambulance Services",
+      //   link: "/bikeambulanceservice",
+      // },
     ];
   return (
     <div className="whywe">
@@ -81,24 +81,24 @@ const WhyWe = () => {
       <h2>
         Ambigo provides a comprehensive range of ambulance services designed to
         meet the diverse needs of our customers. From standard ambulance
-        services to advanced options like air ambulances, ICU ventilator
-        ambulances, and dead body freezer boxes, we cater to every possible
+        services to advanced options like patient transport, advance transport and basic life support, we cater to every possible
         requirement with utmost care and professionalism. Below, we have
         detailed the major ambulance services offered by Ambigo, along with
         their key features and benefits
       </h2>
-      <div className="ambulanceTypes">
+      <div className="ambulance-container">
         {ambulances.map((item) => {
           return (
             <Link
               to={item.link}
               activeClassName="active"
+              className="ambulance-card"
               onClick={() => (window.location.href = item.link)}
               style={{ listStyle: "none", textDecoration: "none" }}
             >
-              <div className="ambulanceType">
-                <img src={item.image} />
-                <h3>{item.Name}</h3>
+              <div className="">
+                <img src={item.image} className="ambulance-image" />
+                <h3 className="ambulance-name">{item.Name}</h3>
               </div>
             </Link>
           );

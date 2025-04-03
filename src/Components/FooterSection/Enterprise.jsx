@@ -1,9 +1,15 @@
-import React ,{ useState } from "react";
+import React ,{ useState, useEffect } from "react";
 import './Enterprise.css';
 import AppDownload from "../AppDownload";
-import Footer from "../Footer";
+import { useLocation } from "react-router-dom";
 
 const Enterprise = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
     const [formData, setFormData] = useState({
       organizationName: "",
       companyEmail: "",
@@ -48,16 +54,13 @@ const Enterprise = () => {
         <div className="ERSright">
           <h1>AmbigoClinic</h1>
           <p>
-            Stay protected with AmbigoAlert, your dedicated helpline for on-call
+            Stay protected with AmbigoAlert, our dedicated helpline for on-call
             ambulance services. Available 24/7, AmbigoAlert provides instant
-            access to ambulance services, teleconsultations, diagnostics, home
-            healthcare, and elderly care solutions. Experience seamless
-            healthcare access and expert care across 500+ Indian cities,
-            ensuring peace of mind for you and your loved ones.
+            access to ambulance services.
           </p>
         </div>
       </div>
-      <div className="enterERS">
+      {/* <div className="enterERS">
         <div className="ERSright">
           <h1>AmbigoERS</h1>
           <p>
@@ -88,7 +91,7 @@ const Enterprise = () => {
             immediate access to quality healthcare.
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="enterERS">
         <div className="ERSright">
           <h1>AmbigoFit</h1>

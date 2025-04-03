@@ -1,70 +1,177 @@
+// AmbigoAppPromo.jsx
 import React from "react";
 import "./AppDownload.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const AppDownload = () => {
+
+const AmbigoAppPromo = () => {
+  const navigate = useNavigate();
   return (
-    <div className="app-media-section">
-      <h2 className="section-title">App Ambigo</h2>
-      <div className="app-media-container">
-        {/* Left Side: QR Code */}
-        <div className="app-qr">
-          <img
-            src="https://medulance.com/assets/images/qr-code.svg"
-            alt="QR Code for App Download"
-          />
-          <p>Scan to download the app</p>
-        </div>
+    <div className="app-promo-container">
+      <div className="app-promo-content">
+        <h1 className="app-promo-title">Get more in the app</h1>
 
-        {/* Right Side: Store Info */}
-        <div className="app-info">
-          <h3>Available on</h3>
-          <p>Download our app now from:</p>
-          <div className="store-icons">
-            <a href="#" className="store-link">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Google Play Store"
-                className="store-icon"
-              />
-            </a>
-            <a href="#" className="store-link">
-              <img
-                src="https://gavineshwar.github.io/Medica/assests/appstore.png"
-                alt="App Store"
-                className="store-icon"
-              />
-            </a>
+        <div className="promo-cards-container">
+          {/* QR Code Card */}
+          <div className="promo-card">
+            <div className="promo-card-content">
+              <div className="qr-code-wrapper">
+                <img
+                  src="Ambigo.png"
+                  alt="QR code to download Ambigo app"
+                  className="qr-code"
+                />
+              </div>
+
+              <div className="promo-text">
+                <h2>Download the Ambigo app</h2>
+                <p>Scan to download</p>
+              </div>
+
+              <div className="arrow-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 4l8 8-8 8"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Sign Up Card */}
+          <div className="promo-card">
+            <div className="promo-card-content">
+              <div className="app-logo-wrapper">
+                <div className="app-logo-container">
+                  <img
+                    src="ambulance2.png"
+                    alt="Ambigo logo"
+                    className="app-logo"
+                  />
+                </div>
+              </div>
+
+              <div className="promo-text">
+                <h2
+                  onClick={() => {
+                    navigate("/login");
+                    window.scrollTo(0, 1);
+                  }}
+                >
+                  Sign up to ride
+                </h2>
+              </div>
+
+              <div className="arrow-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 4l8 8-8 8"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="promo-cards-container">
+          {/* QR Code Card */}
+          <div className="promo-card">
+            <div className="promo-card-content">
+              <div className="qr-code-wrapper">
+                <img
+                  src="driverApp.png"
+                  alt="QR code to download Ambigo app"
+                  className="qr-code"
+                />
+              </div>
+
+              <div className="promo-text">
+                <h2>Download the Driver Ambigo app</h2>
+                <p>Scan to download</p>
+              </div>
+
+              <div className="arrow-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 4l8 8-8 8"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Sign Up Card */}
+          <div className="promo-card">
+            <div className="promo-card-content">
+              <div className="app-logo-wrapper">
+                <div className="app-logo-container">
+                  <img
+                    src="ambulance4.jpg"
+                    alt="Ambigo logo"
+                    className="app-logo"
+                  />
+                </div>
+              </div>
+
+              <div className="promo-text">
+                <h2
+                  onClick={() => {
+                    navigate("/login");
+                    window.scrollTo(0, 1);
+                  }}
+                >
+                  Driver app: To Drive and Earn
+                </h2>
+              </div>
+
+              <div className="arrow-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 4l8 8-8 8"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Sign Up Link */}
+        <div
+          onClick={() => {
+            navigate("/login");
+            window.scrollTo(0, 1);
+          }}
+          className="bottom-signup"
+        >
+          <h2>Sign up to book Ambulance</h2>
+          <div className="large-arrow-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M8 4l8 8-8 8"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="divider"></div>
       </div>
-      <BookNow />
     </div>
   );
 };
 
-const BookNow = ()=>{
-    return (
-      <div className="BookNow">
-        <div className="CallUs">
-          <h1>Call Our Assistance</h1>
-          <button>
-            <a href="tel:+91 9866792496">Call Now</a>
-          </button>
-        </div>
-        <div className="BookUs">
-          <h2>Book Ambulance</h2>
-          <NavLink
-            to="/login"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/login")}
-          >
-            <button>
-              <a href="#">Book Now</a>
-            </button>
-          </NavLink>
-        </div>
-      </div>
-    );
-}
-export default AppDownload;
+export default AmbigoAppPromo;

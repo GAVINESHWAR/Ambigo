@@ -2,6 +2,7 @@ import React from "react"
 import "./OxyzenAmbulance.css";
 import Footer from "../Footer";
 import AmbulancePrices from "../AmbulancePrices";
+import { NavLink } from "react-router-dom";
 
 
 const OxyzenAmbulance = () => {
@@ -71,10 +72,16 @@ const OxyzenAmbulance = () => {
           </h1>
           <p>
             Breathing life into critical moments. Swiftly book oxygen ambulance
-            services with GoAid, ensuring reliable transport and expert care.
+            services with Ambigo, ensuring reliable transport and expert care.
             Your health, our priority.
           </p>
-          <button>Book Now</button>
+          <NavLink to="/login"
+          activeClassName = "active"
+          onClick={(e)=>{
+            window.location.href("/login")
+          }}>
+            <button>Book Now</button>
+          </NavLink>
         </div>
         <div className="startRight">
           <img
@@ -85,7 +92,7 @@ const OxyzenAmbulance = () => {
       </div>
       <div className="Oxyexperience">
         <div className="oxyright">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTYSkeDEJMks3mk79lV-OT09eEqHHlOYRgrw&s" />
+          <img src="https://media.istockphoto.com/id/1427662583/photo/experienced-ambulance-doctor-preparing-the-medical-equipment-for-oxygen-therapy.jpg?s=612x612&w=0&k=20&c=RK2CCquRqjcJw2Qo4KcXqUJPDcpRbjHorzsmlSUbemA=" />
         </div>
         <div className="oxyleft">
           <h1>Experience Our Best Price Oxygen Ambulance Service</h1>
@@ -102,13 +109,13 @@ const OxyzenAmbulance = () => {
             quality of care. Our highly trained medical professionals and
             state-of-the-art vehicles ensure a smooth and safe journey, focusing
             on the well-being of patients every step of the way. Whether you're
-            in Jaipur, Hisar, Patna, Gurugram, Mumbai, or Delhi, Ambigo's
-            nationwide reach ensures that our Best Price Oxygen Ambulance
-            Service is always accessible when you need it the most. Choose
-            Ambigo for reliable, affordable, and expertly managed oxygen
-            ambulance services. Your health and peace of mind are our top
-            priorities, and we're committed to delivering both, without breaking
-            the bank.
+            in Ananthapur, Dharmavaram, Tadipatri, Penukondala, Puttapatri, or
+            kalyana Durgam, Ambigo's nationwide reach ensures that our Best
+            Price Oxygen Ambulance Service is always accessible when you need it
+            the most. Choose Ambigo for reliable, affordable, and expertly
+            managed oxygen ambulance services. Your health and peace of mind are
+            our top priorities, and we're committed to delivering both, without
+            breaking the bank.
           </p>
         </div>
       </div>
@@ -116,7 +123,7 @@ const OxyzenAmbulance = () => {
         <h1>Why Choose Ambigo for Oxygen Ambulance</h1>
         <p>
           Ambigo is india’s leading company in providing trustworthy Ambulance
-          services. We are now available in Anantapur, Tadipatri, Penukodala and
+          services. We are now available in Anantapur, Tadipatri, Penukodala, Puttapatri and
           Dharmavaram.
         </p>
         <div className="whythisoxy">
@@ -187,7 +194,7 @@ const OxyzenAmbulance = () => {
         <img src="https://www.cityambulanceservice.in/wp-content/uploads/2024/09/Ambuance-Hspital-1024x682.jpg" />
       </div>
       <h1 style={{ textAlign: "center", margin: "10px 0 10px 0 " }}>
-        Features of GoAid Oxygen Ambulance Services
+        Features of Ambigo Oxygen Ambulance Services
       </h1>
       <p style={{ textAlign: "center", margin: "10px 0 10px 0" }}>
         Discover Exceptional Oxygen Ambulance Features: Swift Response, Expert

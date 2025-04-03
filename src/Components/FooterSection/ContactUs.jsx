@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ContactUs.css";
 import AppDownload from "../AppDownload";
 import Footer from "../Footer";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <div className="concontact-page">
@@ -24,18 +31,17 @@ const ContactUs = () => {
             <h2>Contact Information</h2>
             <ul className="concontact-list">
               <li className="conaddress">
-                A 296/1, Third Floor, Pocket A, Okhla Phase I, Raju Road,
-                Anantapur, Ananthapuramu 515002
+                11/2/310,NAIK NAGAR,ANANTAPUR, ANDHRA PRADESH 515001
               </li>
               <li className="conphone">9866792496</li>
               <li>
-                <a href="mailto:info@medulance.com" className="conemail">
-                  ambigo@gmail.com
+                <a href="mailto:ambigi.in@gmail.com.com" className="conemail">
+                  ambigo.in@gmail.com
                 </a>
               </li>
               <li>
                 <a href="https://www.medulance.com" className="conwebsite">
-                  www.ambigo.com
+                  www.ambigo.in
                 </a>
               </li>
             </ul>
@@ -51,9 +57,7 @@ const ContactUs = () => {
             </p>
             <div className="conhelp-options">
               <p>Request a demo from one of our conversion specialists.</p>
-              <p>
-                Discover the many ways in which our customers use Medulance.
-              </p>
+              <p>Discover the many ways in which our customers use Ambigo.</p>
             </div>
           </div>
         </div>
@@ -86,7 +90,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <AppDownload/>
+      <AppDownload />
     </>
   );
 }

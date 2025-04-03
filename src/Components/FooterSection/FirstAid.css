@@ -1,0 +1,138 @@
+.ambigo-page {
+  text-align: center;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('https://www.kauveryhospital.com/blog/wp-content/uploads/2023/05/Learn-How-to-Perform-First-Aid.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 24px;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  background: #ffab4b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffab4b;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+}
+
+.ambigo-page h2 {
+  color: #ffab4b;
+}
+
+.ambigo-page p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Why Choose Ambigo */
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.benefit {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.benefit:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  color: #ffab4b;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Ambulance Services */
+.ambulance-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ambulance-services li {
+  background: #ffefef;
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Contact Section */
+.contact-button {
+  background: #ffab4b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background: #ffab4b;
+}
+
+.phone-icon {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .benefits-container,
+  .tips-container {
+    flex-direction: column;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 20px;
+  }
+}

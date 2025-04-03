@@ -41,7 +41,7 @@ const AmbulanceServiceSection = () => {
     const features = [
       {
         head: "Variety of Ambulance Options",
-        info: "Ambigo provides a diverse range of ambulance services, including Normal, ICU Ventilator, Dead Body Freezer, and Air Ambulance, catering to different medical needs.",
+        info: "Ambigo provides a diverse range of ambulance services, including patient transport, advance life support and basic life support, catering to different medical needs.",
       },
       {
         head: "24/7 Availability",
@@ -126,8 +126,7 @@ const AmbulanceServiceSection = () => {
         <div className="OffLeft">
           <h4>
             Experience swift and budget-friendly medical transportation with
-            Ambigo. Our services include a variety of options such as standard
-            ambulances, air ambulances, and dead body freezer ambulances. With
+            Ambigo. Our services include a variety of options such as patient transport, advance life support, and basic life support ambulances. With
             affordability at the core, we offer expert care, 24/7 availability,
             and an extensive service area. <br />
             Whether it’s an ICU ventilator ambulance or routine patient
@@ -200,8 +199,7 @@ const AmbulanceServiceSection = () => {
       </h1>
       <h4 style={{ textAlign: "center" }}>
         Explore the Wide Range of Features offered by Ambigo Ambulance Services,
-        including Normal, ICU Ventilator, Dead Body Freezer, and Bike Ambulance
-        options. Reliable, compassionate, and affordable solutions are available
+        including Patient transport, Advance life support, basic life support
         in Anantapur
       </h4>
       <div className="SSdetails">

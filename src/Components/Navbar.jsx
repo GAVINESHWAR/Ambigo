@@ -1,87 +1,113 @@
-import React, { useState } from "react";
-import "./Navbar.css";
-import Logo from '../assets/LogoIcon.png';
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
- 
+import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Toggle menu
   const toggleMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        {/* Logo/Image */}
+        {/* Logo */}
         <div className="navbar-logo">
-          <img src={Logo} alt="Logo" />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              color: "orangered",
-            }}
-          >
-            <h1 style={{ fontFamily: "serif" }}>Ambigo</h1>
-            <h4>ECNALUBMA Services</h4>
+          <NavLink to="/">
+            <img src="/Logo1.png" alt="Logo" />
+          </NavLink>
+        </div>
+
+        {/* Toggle Button */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <div className={`menu-icon-bar ${isOpen ? "open" : ""}`}></div>
+          <div className={`menu-icon-bar ${isOpen ? "open" : ""}`}></div>
+          <div className={`menu-icon-bar ${isOpen ? "open" : ""}`}></div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
+          <div className="navbar-nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/individual"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Services
+            </NavLink>
+            <NavLink
+              to="/training"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Training
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/contactus"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Contact
+            </NavLink>
           </div>
         </div>
 
-        {/* Desktop Navigation Links */}
-        <ul className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
-          <NavLink
-            to="/"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/")}
+        {/* Auth Buttons */}
+        <div className={`navbar-auth ${isOpen ? "active" : ""}`}>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="btn btn-login"
           >
-            <li>
-              <a href="/#Home"> Home</a>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/enterprise"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/enterprise")}
+            Login
+          </button>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="btn btn-signup"
           >
-            <li>
-              <a href="/#services">Services</a>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/training"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/training")}
-          >
-            <li>
-              <a href="/">Training</a>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/training"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/training")}
-          >
-            <li>
-              <a href="/">Blogs</a>
-            </li>
-          </NavLink>
-          <NavLink
-            to="/contactus"
-            activeClassName="active"
-            onClick={() => (window.location.href = "/contactus")}
-          >
-            <li>
-              <a href="/">Contact Us</a>
-            </li>
-          </NavLink>
-        </ul>
-
-        {/* Hamburger Menu Icon */}
-        <div className="hamburger" onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+            Sign Up
+          </button>
         </div>
       </div>
     </nav>

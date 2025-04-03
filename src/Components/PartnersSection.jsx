@@ -96,7 +96,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-section">
-      <h2 className="contact-form-heading">Collaborate With Ambigo</h2>
+      <h2 className="contact-form-heading">Join with Us</h2>
       <p className="contact-form-subheading">
         Reach out to us to discuss collaboration opportunities.
       </p>

@@ -1,11 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { FaBed, FaClock, FaHeadset, FaAmbulance } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
 import './Hospital.css';
 import AppDownload from "../AppDownload";
-import Footer from "../Footer";
+import { useLocation } from "react-router-dom";
 
 const Hospital = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
      const [formData, setFormData] = useState({
        organizationName: "",
        companyEmail: "",

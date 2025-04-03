@@ -12,15 +12,16 @@ const Footer = () => {
             <li>
               <Link
                 to="/AboutUs"
-                onClick={() => (window.location.href = "/AboutUs")}
+                activeClassName="active"
+                // onClick={() => (window.location.href = "/AboutUs")}
               >
-                About
+                About Us
               </Link>
             </li>
             <li>
               <NavLink
                 to="/ourteam"
-                onClick={() => (window.location.href = "/ourteam")}
+                // onClick={() => (window.location.href = "/ourteam")}
                 activeClassName="active"
               >
                 Team
@@ -29,10 +30,18 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/Careers"
-                onClick={() => (window.location.href = "/Careers")}
+                // onClick={() => (window.location.href = "/Careers")}
                 activeClassName="active"
               >
                 Careers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/terms"
+                // onClick={()=>(window.location.href = "/terms")}
+              >
+                Terms and Conditions
               </NavLink>
             </li>
           </ul>
@@ -45,7 +54,7 @@ const Footer = () => {
               <NavLink
                 to="/enterprise"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/enterprise")}
+                // onClick={() => (window.location.href = "/enterprise")}
               >
                 Enterprise
               </NavLink>
@@ -54,7 +63,7 @@ const Footer = () => {
               <NavLink
                 to="/individual"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/individual")}
+                // onClick={() => (window.location.href = "/individual")}
               >
                 Individual
               </NavLink>
@@ -63,7 +72,7 @@ const Footer = () => {
               <NavLink
                 to="/hospital"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/hospital")}
+                // onClick={() => (window.location.href = "/hospital")}
               >
                 Hospital
               </NavLink>
@@ -78,7 +87,7 @@ const Footer = () => {
               <NavLink
                 to="/training"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/training")}
+                // onClick={() => (window.location.href = "/training")}
               >
                 Driving Training
               </NavLink>
@@ -87,16 +96,16 @@ const Footer = () => {
               <NavLink
                 to="/training"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/training")}
+                // onClick={() => (window.location.href = "/training")}
               >
                 Paramedical Training Institute
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/training/first-aid"
+                to="/firstaid"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // onClick={() => (window.location.href = "/firstaid")}
               >
                 First Aid
               </NavLink>
@@ -111,40 +120,43 @@ const Footer = () => {
               <NavLink
                 to="/contactus"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/contactus")}
+                // onClick={() => (window.location.href = "/contactus")}
               >
                 Contact
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/support"
+                to="/contactus"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // onClick={() => (window.location.href = "/contactus")}
               >
                 Support
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/location"
+              {/* <NavLink
+                to="/contactus"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // onClick={() => (window.location.href = "/contactus")}
               >
                 Location
-              </NavLink>
+              </NavLink> */}
+              <a href="https://www.google.com/maps/place/Naik+Nagar,+Adarsh+Nagar,+Anantapur,+Andhra+Pradesh+515002/@14.6583373,77.5936195,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb14af0812585c3:0x1bd312d8f371f28c!8m2!3d14.6582289!4d77.5962712!16s%2Fg%2F11bvt9s6ln?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D">
+                Location
+              </a>
             </li>
           </ul>
         </div>
 
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h3>Blogs</h3>
           <ul>
             <li>
               <NavLink
                 to="/AboutUs"
-                activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // activeClassName="active"
+                // onClick={() => (window.location.href = "/AboutUs")}
               >
                 Blogs
               </NavLink>
@@ -153,7 +165,7 @@ const Footer = () => {
               <NavLink
                 to="/AboutUs"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // onClick={() => (window.location.href = "/AboutUs")}
               >
                 Reviews
               </NavLink>
@@ -162,13 +174,13 @@ const Footer = () => {
               <NavLink
                 to="/AboutUs"
                 activeClassName="active"
-                onClick={() => (window.location.href = "/AboutUs")}
+                // onClick={() => (window.location.href = "/AboutUs")}
               >
                 Founders Desk
               </NavLink>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
 
       <div className="footer-bottom">

@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './Training.css';
 import AppDownload from "../AppDownload";
-import Footer from "../Footer";
+import { useLocation } from "react-router-dom";
 
 const Training = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <h1 style={{textAlign:"center", margin:"30px"}}>Comprehensive Ambulance and Paramedical Training</h1>
@@ -24,7 +30,7 @@ const Training = () => {
           <div className="training-content">
             <h2>Driver Training</h2>
             <p>
-              Medulance drivers are well-trained in first aid assistance and
+              Ambigo drivers are well-trained in first aid assistance and
               patient handling. We also provide them with training in basic
               skills like communication, grooming, technology, and safety
               protocols.
@@ -44,7 +50,7 @@ const Training = () => {
           <div className="training-content">
             <h2>Paramedical Training Institute</h2>
             <p>
-              Medulance is also planning to launch its own paramedic training
+              Ambigo is also planning to launch its own paramedic training
               institute, to provide a training and upskilling opportunity for
               the existing paramedics and EMTs of the nation and also people
               willing to pursue their career in emergency response services.

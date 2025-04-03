@@ -1,0 +1,130 @@
+.paramedical-bg {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+}
+
+.form-card:hover {
+  transform: translateY(-10px);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #72b06f;
+  box-shadow: 0 0 8px rgba(114, 176, 111, 0.5);
+  outline: none;
+}
+
+.form-submit {
+  background-color: #72b06f;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+  background-color: #60995d;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .form-card {
+    padding: 25px;
+    max-width: 80%;
+  }
+
+  .form-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-input, 
+  .form-submit {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .form-input, 
+  .form-submit {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

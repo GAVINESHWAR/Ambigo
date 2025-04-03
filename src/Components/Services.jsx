@@ -22,8 +22,8 @@ const Services = () => {
       },
       {
         image: "https://gavineshwar.github.io/Medica/assests/pharmacy.jpg",
-        Name: "Pharma Home Delivery",
-        info: "Get medicines delivered to your doorstep with our pharma home delivery service.",
+        Name: "Doctor Consultance",
+        info: "Access expert medical consultations instantly, connecting you with qualified doctors",
       },
     ];
   return (

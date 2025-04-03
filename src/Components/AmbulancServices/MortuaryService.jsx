@@ -102,11 +102,15 @@ const MortuaryService = () => {
           even easier by downloading our user-friendly app, available on both
           the Play Store and App Store.
           <br />
-          <br /> At <span>Ambigo</span>, we recognize the urgency and
-          sensitivity of such situations, and we are committed to providing
-          fast, professional, and compassionate Dead Body Ambulance Services.
-          Count on us to deliver a dependable and stress-free experience, as we
-          prioritize your peace of mind and convenience when it matters most.
+          <br /> At{" "}
+          <a href="www.ambigo.in">
+            <span>Ambigo</span>
+          </a>
+          , we recognize the urgency and sensitivity of such situations, and we
+          are committed to providing fast, professional, and compassionate Dead
+          Body Ambulance Services. Count on us to deliver a dependable and
+          stress-free experience, as we prioritize your peace of mind and
+          convenience when it matters most.
         </p>
       </div>
       <h1 style={{ textAlign: "center" }}>
@@ -169,23 +173,23 @@ const MortuaryService = () => {
         </p>
         <img src="https://medintu.in/wp-content/uploads/2022/11/mortuary-ambulance-1024x506.jpeg" />
       </div>
-      <h1 style={{textAlign:"center", marginBottom:"20px"}}>
+      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
         Features and Benefits of Ambigo Dead Body Ambulance Mortuary Van
         Services
       </h1>
-      <h3 style={{textAlign:"center", marginBottom:"20px"}}>
+      <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
         Choosing Ambigo's Dead Body Ambulance services offers numerous
         advantages, including:
       </h3>
       <div className="martufeature">
-            {features.map((item)=>{
-                return(
-                    <div className="mortufeatitem">
-                        <h2>{item.name}</h2>
-                        <p>{item.info}</p>
-                    </div>
-                )
-            })}
+        {features.map((item) => {
+          return (
+            <div className="mortufeatitem">
+              <h2>{item.name}</h2>
+              <p>{item.info}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );

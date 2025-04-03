@@ -1,10 +1,16 @@
 import React from "react"
 import './Individual.css';
 import AppDownload from "../AppDownload";
-import Footer from "../Footer";
-
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Individual = () => {
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <h1
@@ -21,7 +27,7 @@ const Individual = () => {
         present across Anantapur, Tadipatri, Dharmavaram, Puttaparthi,
         Penukondala where people can reach out to us for ambulances Support.
       </p>
-      <div className="BookNow">
+      {/* <div className="BookNow">
         <div className="CallUs">
           <h1>Call Our Assistance</h1>
           <button>
@@ -34,7 +40,7 @@ const Individual = () => {
             <a href="#">Book Now</a>
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="indiservice">
         <div className="indiservleft">
           <h1>Home healthcare</h1>

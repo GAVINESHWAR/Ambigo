@@ -21,12 +21,34 @@ import OurTeam from './Components/FooterSection/OurTeam.jsx';
 import Footer from './Components/Footer.jsx';
 import LoginPage from './UserProfile/LoginPage.jsx';
 import RideBooking from './UserProfile/Booking.jsx';
+import TermsPrivacy from './Components/FooterSection/TermsAndConditions.jsx';
+import Gap from './Components/Checking/Gap.jsx';
+import AmbulanceDriverForm from './Components/Career/AmDriverPost.jsx';
+import HospitalCoordinatorForm from './Components/Career/HospitalCoordinationForm.jsx';
+import EmergencyStaffForm from './Components/Career/EmergencyStaff.jsx';
+import ParamedicalTrainerForm from './Components/Career/ParamedicalTrainerForm.jsx';
+import FirstAidPage from './Components/FooterSection/FirstAid.jsx';
+import Blogs from './Components/FooterSection/Blogs.jsx';
+import PatientTransport_car from './Components/AmbulancServices/PatientTransport_car.jsx';
 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Navbar />
+      <Gap />
+      <Routes>
+        <Route path="/ambulanceDriverForm" element={<AmbulanceDriverForm />} />
+        <Route
+          path="/hospitalCoordinatorForm"
+          element={<HospitalCoordinatorForm />}
+        />
+        <Route path="/emergencyStaffForm" element={<EmergencyStaffForm />} />
+        <Route
+          path="/paramedicalTrainerForm"
+          element={<ParamedicalTrainerForm />}
+        />
+      </Routes>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/basicsupport" element={<AmbulanceServiceSection />} />
@@ -36,6 +58,7 @@ createRoot(document.getElementById("root")).render(
           element={<VentilatorAmbulance />}
         />
         <Route path="/mortuaryambulanceservice" element={<MortuaryService />} />
+        <Route path = "/carpatienttransport" element={<PatientTransport_car/>}/>
         <Route path="/deadboxservice" element={<DeadBox />} />
         <Route path="/bikeambulanceservice" element={<BikeAmbulance />} />
         <Route path="/AboutUs" element={<Aboutus />} />
@@ -44,10 +67,13 @@ createRoot(document.getElementById("root")).render(
         <Route path="/individual" element={<Individual />} />
         <Route path="/hospital" element={<Hospital />} />
         <Route path="/training" element={<Training />} />
+        <Route path="firstaid" element = {  <FirstAidPage/>}/>
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/ourteam" element={<OurTeam />} />
+        <Route path = "/blogs" element = {<Blogs/>}/>
         <Route path="/login" element={<LoginPage />} />
-        <Route path = "booking" element = {<RideBooking/>}/>
+        <Route path="/booking" element={<RideBooking />} />
+        <Route path="/terms" element={<TermsPrivacy />} />
       </Routes>
       <Footer />
     </BrowserRouter>

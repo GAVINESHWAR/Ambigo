@@ -186,9 +186,9 @@ export const VentilatorAmbulance = () => {
           src="https://static.vecteezy.com/system/resources/previews/000/670/929/non_2x/vector-emergency-character-ambulance.jpg"
         />
       </div>
-      <h1 style={{textAlign:"center"}}>Features of GoAid ICU Ventilator Ambulance Services</h1>
+      <h1 style={{textAlign:"center"}}>Features of Ambigo ICU Ventilator Ambulance Services</h1>
       <h4 style={{textAlign:"center"}}>
-        Discover the Essential Features of GoAid ICU Ventilator Ambulance
+        Discover the Essential Features of Ambigo ICU Ventilator Ambulance
         Services. Our specialized vehicles provide critical care during transit,
         ensuring patient well-being. Available in cities like Anantapur, Tadipatri,
         Dharmavaram, Gooty, Penukondala.

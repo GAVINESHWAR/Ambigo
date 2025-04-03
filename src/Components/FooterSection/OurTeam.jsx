@@ -1,300 +1,166 @@
-import React from "react";
-import './OurTeam.css';
-import AppDownload from "../AppDownload";
-import Footer from "../Footer";
+import React, { useState, useEffect } from "react";
+import "./OurTeam.css";
+import { useNavigate , useLocation} from "react-router-dom";
 
-const OurTeam = () => {
+const TeamPage = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Karamthoti Sai Kumar",
+      role: "Founder & CEO",
+      bio: "Passionate about the innovative things with service provided minded person",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-nMTqkRU8jkPkRJC2ivjP-qHkGDG2PLeG3A&s",
+      categories: ["Leadership", "Founder"],
+    },
+    // {
+    //   id: 2,
+    //   name: "Priyanka",
+    //   role: "CTO",
+    //   bio: "Full-stack engineer with expertise in cloud architecture and distributed systems. Previously at Google.",
+    //   image: "/api/placeholder/400/400",
+    //   categories: ["Leadership", "Development"],
+    // },
+    {
+      id: 3,
+      name: "Vivek",
+      role: "Software Developer",
+      bio: "Backend expert focused on scalable microservices and database optimization.",
+      image: "/Vivek.png",
+      categories: ["Development"],
+    },
+    {
+      id: 4,
+      name: "G Avineshwar",
+      role: "Web Developer",
+      bio: "Frontend specialist with  experience building responsive, accessible web applications.",
+      image: "/avineshwar.jpg",
+      categories: ["Development"],
+    },
+    // {
+    //   id: 5,
+    //   name: "Sowmya",
+    //   role: "Financial Manager",
+    //   bio: "Former investment banker with experience in fundraising and financial planning for tech startups.",
+    //   image: "/api/placeholder/400/400",
+    //   categories: ["Finance"],
+    // },
+    {
+      id: 6,
+      name: "Prasad",
+      role: "Advisor",
+      bio: "Industry veteran and academic with expertise in full stack applications.",
+      image: "/api/placeholder/400/400",
+      categories: ["Advisory"],
+    },
+    // {
+    //   id: 7,
+    //   name: "James Lee",
+    //   role: "UX/UI Designer",
+    //   bio: "Award-winning designer focused on creating intuitive and delightful user experiences.",
+    //   image: "/api/placeholder/400/400",
+    //   categories: ["Design"],
+    // },
+    // {
+    //   id: 8,
+    //   name: "Olivia Martinez",
+    //   role: "Marketing Director",
+    //   bio: "Digital marketing strategist with experience in growth hacking and brand development.",
+    //   image: "/api/placeholder/400/400",
+    //   categories: ["Marketing"],
+    // },
+  ];
+
+  const categories = [
+    "All",
+    "Leadership",
+    "Development",
+    "Finance",
+    "Advisory",
+    "Design",
+    "Marketing",
+    "Founder",
+  ];
+
+  const filteredMembers =
+    activeFilter === "All"
+      ? teamMembers
+      : teamMembers.filter((member) =>
+          member.categories.includes(activeFilter)
+        );
+
   return (
-    <>
-      <div class="team-section">
-        <h1 class="team-title">
-          Our Team{" "}
-          <span style={{ color: "orange", textDecoration: "underline" }}>
-            Ambigo
-          </span>
-        </h1>
-        <h5 class="team-description">
-          Ambigo has a small yet highly effective team. We are driven by a
-          dedicated and committed workforce with a well-structured system to
-          support our services, ensuring seamless execution and customer
-          satisfaction. Our team comprises professionals across Sales & Business
-          Development, Support, Technology, Client Servicing, and Vendor
-          Management, all led by a passionate and focused group determined to
-          revolutionize ambulance services.
-        </h5>
-      </div>
-      <div class="ourcontainer">
-        <div class="ourprofile-wrapper">
-          <div class="ourprofile-details">
-            <div class="ourheader">
-              <div>
-                <h1 class="name">Karamthoti Sai Kumar</h1>
-                <p class="position">Founder</p>
-              </div>
-              {/* <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.474v6.761z"/>
-                    </svg> */}
-              <img
-                src="https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118"
-                alt="Pranav Bajaj"
-                class="ourprofile-image"
-              />
-            </div>
-
-            <div class="ourabout">
-              <h2 class="oursection-title">About</h2>
-              <p>
-                Co-founder at Medlance Healthcare, driving partner acquisition
-                and growth. Born and raised in Delhi, Pranav is an alumni of
-                Modern School and graduated in Finance from Shaheed Sukhdev
-                College of Business Studies.
-              </p>
-            </div>
-
-            <div class="ourexperience">
-              <h2 class="oursection-title">Experience</h2>
-              <h3>Medlance Healthcare</h3>
-              <p>
-                Drives partner acquisition with startup experience from Zomato
-                and strategic consulting background
-              </p>
-              <ul>
-                <li>Business Development at Zomato</li>
-                <li>Marketing Lead at ThatsRealty</li>
-                <li>Strategy Consultant at Deloitte</li>
-              </ul>
-            </div>
-
-            <div class="ourachievements">
-              <h2 class="oursection-title">Achievements</h2>
-              <ul>
-                <li>Forbes 30U30 Recognition</li>
-                <li>Excellence in Healthcare Entrepreneurship Award</li>
-                <li>BW Healthcare 40U40</li>
-                <li>BW Social Impact Award for Covid Management</li>
-              </ul>
-            </div>
-          </div>
+    <div className="team-page">
+      <div className="hero-section">
+        <div className="hero-content">
+          <h1>Our Team</h1>
+          <p>Meet the talented individuals driving our mission forward</p>
         </div>
       </div>
-      <div class="ourcontainer">
-        <div class="ourprofile-wrapper">
-          <div class="ourprofile-details">
-            <div class="ourheader">
-              <div>
-                <h1 class="name">Priyanka</h1>
-                <p class="position">Co Founder</p>
+
+      <div className="team-container">
+        <div className="filter-buttons">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={activeFilter === category ? "active" : ""}
+              onClick={() => setActiveFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <div className="team-grid">
+          {filteredMembers.map((member) => (
+            <div className="team-card" key={member.id}>
+              <div className="card-inner">
+                <div className="card-front">
+                  <img src={member.image} />
+                  <h3>{member.name}</h3>
+                  <p className="role">{member.role}</p>
+                </div>
+                <div className="card-back">
+                  <h3>{member.name}</h3>
+                  <p className="role">{member.role}</p>
+                  <p className="bio">{member.bio}</p>
+                  <div className="social-links">
+                    <a href="#" aria-label="LinkedIn">
+                      <i className="social-icon">in</i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                      <i className="social-icon">X</i>
+                    </a>
+                    <a href="#" aria-label="Email">
+                      <i className="social-icon">@</i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              {/* <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.474v6.761z"/>
-                    </svg> */}
-              <img
-                src="https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118"
-                alt="Pranav Bajaj"
-                class="ourprofile-image"
-              />
             </div>
-
-            <div class="ourabout">
-              <h2 class="oursection-title">About</h2>
-              <p>
-                Co-founder at Medlance Healthcare, driving partner acquisition
-                and growth. Born and raised in Delhi, Pranav is an alumni of
-                Modern School and graduated in Finance from Shaheed Sukhdev
-                College of Business Studies.
-              </p>
-            </div>
-
-            <div class="ourexperience">
-              <h2 class="oursection-title">Experience</h2>
-              <h3>Medlance Healthcare</h3>
-              <p>
-                Drives partner acquisition with startup experience from Zomato
-                and strategic consulting background
-              </p>
-              <ul>
-                <li>Business Development at Zomato</li>
-                <li>Marketing Lead at ThatsRealty</li>
-                <li>Strategy Consultant at Deloitte</li>
-              </ul>
-            </div>
-
-            <div class="ourachievements">
-              <h2 class="oursection-title">Achievements</h2>
-              <ul>
-                <li>Forbes 30U30 Recognition</li>
-                <li>Excellence in Healthcare Entrepreneurship Award</li>
-                <li>BW Healthcare 40U40</li>
-                <li>BW Social Impact Award for Covid Management</li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-      <div class="ourcontainer">
-        <div class="ourprofile-wrapper">
-          <div class="ourprofile-details">
-            <div class="ourheader">
-              <div>
-                <h1 class="name">G Avineshwar</h1>
-                <p class="position">Web Developer</p>
-              </div>
-              {/* <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.474v6.761z"/>
-                    </svg> */}
-              <img
-                src="https://github.com/user-attachments/assets/7fc6a861-0811-4941-aed1-4ce164896b36"
-                alt="Pranav Bajaj"
-                class="ourprofile-image"
-              />
-            </div>
 
-            <div class="ourabout">
-              <h2 class="oursection-title">About</h2>
-              <p>
-                Co-founder at Medlance Healthcare, driving partner acquisition
-                and growth. Born and raised in Delhi, Pranav is an alumni of
-                Modern School and graduated in Finance from Shaheed Sukhdev
-                College of Business Studies.
-              </p>
-            </div>
-
-            <div class="ourexperience">
-              <h2 class="oursection-title">Experience</h2>
-              <h3>Medlance Healthcare</h3>
-              <p>
-                Drives partner acquisition with startup experience from Zomato
-                and strategic consulting background
-              </p>
-              <ul>
-                <li>Business Development at Zomato</li>
-                <li>Marketing Lead at ThatsRealty</li>
-                <li>Strategy Consultant at Deloitte</li>
-              </ul>
-            </div>
-
-            <div class="ourachievements">
-              <h2 class="oursection-title">Achievements</h2>
-              <ul>
-                <li>Forbes 30U30 Recognition</li>
-                <li>Excellence in Healthcare Entrepreneurship Award</li>
-                <li>BW Healthcare 40U40</li>
-                <li>BW Social Impact Award for Covid Management</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div className="join-team-section">
+        <h2>Join Our Team</h2>
+        <p>We're always looking for talented individuals to join our mission</p>
+        <button
+        onClick={()=>{
+          navigate("/Careers")
+        }} className="cta-button">View Open Positions</button>
       </div>
-      <div class="ourcontainer">
-        <div class="ourprofile-wrapper">
-          <div class="ourprofile-details">
-            <div class="ourheader">
-              <div>
-                <h1 class="name">Vivek</h1>
-                <p class="position">Software Developer</p>
-              </div>
-              {/* <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.474v6.761z"/>
-                    </svg> */}
-              <img
-                src="https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118"
-                alt="Pranav Bajaj"
-                class="ourprofile-image"
-              />
-            </div>
-
-            <div class="ourabout">
-              <h2 class="oursection-title">About</h2>
-              <p>
-                Co-founder at Medlance Healthcare, driving partner acquisition
-                and growth. Born and raised in Delhi, Pranav is an alumni of
-                Modern School and graduated in Finance from Shaheed Sukhdev
-                College of Business Studies.
-              </p>
-            </div>
-
-            <div class="ourexperience">
-              <h2 class="oursection-title">Experience</h2>
-              <h3>Medlance Healthcare</h3>
-              <p>
-                Drives partner acquisition with startup experience from Zomato
-                and strategic consulting background
-              </p>
-              <ul>
-                <li>Business Development at Zomato</li>
-                <li>Marketing Lead at ThatsRealty</li>
-                <li>Strategy Consultant at Deloitte</li>
-              </ul>
-            </div>
-
-            <div class="ourachievements">
-              <h2 class="oursection-title">Achievements</h2>
-              <ul>
-                <li>Forbes 30U30 Recognition</li>
-                <li>Excellence in Healthcare Entrepreneurship Award</li>
-                <li>BW Healthcare 40U40</li>
-                <li>BW Social Impact Award for Covid Management</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ourcontainer">
-        <div class="ourprofile-wrapper">
-          <div class="ourprofile-details">
-            <div class="ourheader">
-              <div>
-                <h1 class="name">Prasad</h1>
-                <p class="position">Advisor</p>
-              </div>
-              {/* <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.474v6.761z"/>
-                    </svg> */}
-              <img
-                src="https://github.com/user-attachments/assets/5a436505-03c0-4637-8137-62eb3f029118"
-                alt="Pranav Bajaj"
-                class="ourprofile-image"
-              />
-            </div>
-
-            <div class="ourabout">
-              <h2 class="oursection-title">About</h2>
-              <p>
-                Co-founder at Medlance Healthcare, driving partner acquisition
-                and growth. Born and raised in Delhi, Pranav is an alumni of
-                Modern School and graduated in Finance from Shaheed Sukhdev
-                College of Business Studies.
-              </p>
-            </div>
-
-            <div class="ourexperience">
-              <h2 class="oursection-title">Experience</h2>
-              <h3>Medlance Healthcare</h3>
-              <p>
-                Drives partner acquisition with startup experience from Zomato
-                and strategic consulting background
-              </p>
-              <ul>
-                <li>Business Development at Zomato</li>
-                <li>Marketing Lead at ThatsRealty</li>
-                <li>Strategy Consultant at Deloitte</li>
-              </ul>
-            </div>
-
-            <div class="ourachievements">
-              <h2 class="oursection-title">Achievements</h2>
-              <ul>
-                <li>Forbes 30U30 Recognition</li>
-                <li>Excellence in Healthcare Entrepreneurship Award</li>
-                <li>BW Healthcare 40U40</li>
-                <li>BW Social Impact Award for Covid Management</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <AppDownload />
-    </>
+    </div>
   );
-}
-export default OurTeam
+};
+
+export default TeamPage;

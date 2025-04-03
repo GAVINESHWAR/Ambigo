@@ -110,13 +110,13 @@ const DeadBox = () => {
         <div className="boxrentleft">
           <h1>Approximate rental charges for dead body freezer box on hire</h1>
           <p>
-            For those seeking a dead body freezer box on hire, GoAid offers
+            For those seeking a dead body freezer box on hire, Ambigo offers
             transparent and approximate rental charges of around 2200-2900. Our
             dead body freezer box rental prices are designed to provide clarity
             and affordability during sensitive times. With a commitment to
-            dignity and reliability, GoAid ensures that families can access
+            dignity and reliability, Ambigo ensures that families can access
             quality freezer boxes for a dead body at reasonable costs. Choose
-            GoAid for a compassionate and cost-effective solution during moments
+            Ambigo for a compassionate and cost-effective solution during moments
             of grief.
           </p>
         </div>

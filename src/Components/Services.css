@@ -40,7 +40,7 @@
 
 .serviceItem:hover {
   transform: translateY(-10px); /* Slight hover effect */
-  box-shadow: 0 6px 15px rgba(20, 188, 50, 0.2); /* Elevated shadow on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.164); 
   /* background: orange; */
   /* color: white; */
 }
@@ -58,7 +58,7 @@
 }
 
 .serviceItem h3 {
-  font-size: 1em;
+  font-size: 0.8em;
   color: #7f8c8d; /* Secondary text color */
   text-align: center;
 }
